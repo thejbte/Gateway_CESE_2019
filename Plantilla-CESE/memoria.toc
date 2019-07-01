@@ -1,0 +1,30 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{section*.1}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n General}{1}{chapter.8}
+\contentsline {section}{\numberline {1.1}Aprendiendo \LaTeX {}}{1}{section.9}
+\contentsline {subsection}{\numberline {1.1.1}Una introducci\IeC {\'o}n (no tan corta) a \LaTeX {}}{1}{subsection.10}
+\contentsline {subsection}{\numberline {1.1.2}Gu\IeC {\'\i }a matem\IeC {\'a}tica r\IeC {\'a}pida para \LaTeX {}}{1}{subsection.11}
+\contentsline {section}{\numberline {1.2}Utilizando esta plantilla}{1}{section.12}
+\contentsline {subsection}{\numberline {1.2.1}Acerca de esta plantilla}{2}{subsection.13}
+\contentsline {section}{\numberline {1.3}Qu\IeC {\'e} incluye esta plantilla}{2}{section.14}
+\contentsline {subsection}{\numberline {1.3.1}Carpetas}{2}{subsection.15}
+\contentsline {subsection}{\numberline {1.3.2}Archivos}{3}{subsection.18}
+\contentsline {section}{\numberline {1.4}Entorno de trabajo}{4}{section.19}
+\contentsline {subsection}{\numberline {1.4.1}Configurando TexMaker}{4}{subsection.20}
+\contentsline {section}{\numberline {1.5}Personalizando la plantilla en el archivo \texttt {\bfseries memoria.tex}}{5}{section.22}
+\contentsline {section}{\numberline {1.6}El c\IeC {\'o}digo del archivo \texttt {\bfseries memoria.tex} explicado}{6}{section.23}
+\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n Espec\IeC {\'\i }fica}{7}{chapter.24}
+\contentsline {section}{\numberline {2.1}Estilo y convenciones}{7}{section.25}
+\contentsline {subsection}{\numberline {2.1.1}Uso de may\IeC {\'u}scula inicial para los t\IeC {\'\i }tulo de secciones}{7}{subsection.26}
+\contentsline {subsection}{\numberline {2.1.2}Este es el t\IeC {\'\i }tulo de una subsecci\IeC {\'o}n}{7}{subsection.29}
+\contentsline {subsection}{\numberline {2.1.3}Figuras}{8}{subsection.30}
+\contentsline {subsection}{\numberline {2.1.4}Tablas}{9}{subsection.37}
+\contentsline {subsection}{\numberline {2.1.5}Ecuaciones}{10}{subsection.39}
+\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{11}{chapter.42}
+\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del software}{11}{section.43}
+\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{13}{chapter.73}
+\contentsline {section}{\numberline {4.1}Pruebas funcionales del hardware}{13}{section.74}
+\contentsline {chapter}{\numberline {5}Conclusiones}{15}{chapter.75}
+\contentsline {section}{\numberline {5.1}Conclusiones generales }{15}{section.76}
+\contentsline {section}{\numberline {5.2}Pr\IeC {\'o}ximos pasos}{15}{section.77}
