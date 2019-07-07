@@ -5,12 +5,142 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-La idea de esta sección es presentar el tema de modo que cualquier persona que no conoce el tema pueda entender de qué se trata y por qué es importante realizar este trabajo y cuál es su impacto.
+En este capitulo se muestra la idea general del proyecto y se describen las características principales de la solución implementada.
 \section{Estructura general del sistema}
-\label{sec:ejemplo}
+
+%\label{sec:ejemplo}
+
+El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}.
+
+
+
+\begin{figure}[h]
+
+	\centering
+
+	\includegraphics[scale=.35]{./Figures/esquemaGeneral.png}
+
+	\caption{Diagrama general del sistema.}
+
+	\label{fig:esquemaGeneral}
+
+\end{figure}
+
+
+
+El sistema se compone de un microcontrolador ARM(\textit{Advanced RISC Machine}) Cortex\textregistered -M4, dos bus UART(\textit{Universal Asynchronous Receiver-Transmitter}) para que el sistema pueda tener una arquitectura modular que le permite incorporar nuevas tecnologías de comunicación para transmitir inalambricamente tales como: SigFox, LoRa, Nb-IOT, Cat-M, WiFi y 3G.
+
+También consta de un medidor de voltaje para batería de LiPo, 2 entradas analógicas de tensión, 1 de corriente y 5 entradas digitales con el fin de poder adquirir datos de diferentes variables en los procesos industriales.
+
+
+
+
+
+
 
 \section{Requerimientos}
 
+\subsection{Grupo de requerimientos asociados al hardware}
+
+\begin{enumerate}
+
+	\item Microcontrolador.
+
+	\begin{itemize}
+
+		\item Debe tener procesador ARM Cortex M0+ o M4.
+
+		\item Debe tener 3 puertos UART.
+
+		\item Debe tener comunicación I2C/SPI.
+
+		\item Debe tener memoria flash mayor a 64 kb.
+
+		\item Debe tener 3 entradas analógicas.
+
+		\item Debe tener 5 entradas digitales.
+
+	\end{itemize}
+
+	%\item Nivel de protección debe ser IP65.
+
+	\item Autonomía de la batería debe ser de 1 días.
+
+	\item Módulo Sigfox.
+
+		\begin{itemize}
+
+			\item Debe tener un módulo Dual Zone con comunicación por UART.
+
+			\item Debe tener antena externa con centro de banda en 915 MHz.
+
+		\end{itemize}
+
+	\item Módulo Lora.
+
+		\begin{itemize}
+
+			\item Debe tener un módulo con comunicación por UART/I2C.
+
+			\item Debe tener antena externa con centro de banda en 915 MHz.
+
+		\end{itemize}
+
+		\item El sistema debe tener dos (2) entradas analógicas de voltaje de 0-12 Vdc.
+
+		\item El sistema debe tener una (1) entradas analógicas de corriente 4-20 mA.
+
+		\item El sistema debe tener cinco (5) entradas digitales 0-24 Vdc.
+
+\end{enumerate}
+
+
+
+\subsection{Grupo de requerimientos asociados al módulo Sigfox.}
+
+	\begin{enumerate}
+
+		\item Debe colocarse en modo de bajo consumo mientras no esté en uso.
+
+		\item Transmisiones Uplink al backend de sigfox máximo 50 mensajes por día.
+
+		\item Verificación de cada respuesta de comando AT enviado desde el MCU al módulo SIgFox.
+
+	\end{enumerate}
+
+
+
+
+
+\subsection{Grupo de requerimientos asociados al módulo Lora}
+
+	\begin{enumerate}
+
+		\item Verificación de cada respuesta de los comandos enviados desde el MCU al módulo Lora.
+
+		\item Debe colocarse en modo de bajo consumo mientras no esté en uso.
+
+	\end{enumerate}
+
+
+
+\subsection{Otros requerimientos}
+
+\begin{enumerate}
+
+	\item En el sistema se podrán configurar umbrales máximos y mínimos de las lecturas analógicas.
+
+	\item El sistema deberá verificar las entradas analógicas cada 1 minuto (parámetro configurable).
+
+	\item El sistema saldrá del modo de bajo consumo cada vez que ocurra una interrupción externa.
+
+\end{enumerate}
+
+
+
+
+
+\section{IoT (\textit{internet of things})}
 
 \section{Tecnologías de comunicación}
 
@@ -20,55 +150,17 @@ La idea de esta sección es presentar el tema de modo que cualquier persona que 
 
 \section{Antecedentes}
 
-\subsection{Uso de mayúscula inicial para los título de secciones}
-
-Si en el texto se hace alusión a diferentes partes del trabajo referirse a ellas como capítulo, sección o subsección según corresponda. Por ejemplo: ``En el capítulo \ref{Chapter1} se explica tal cosa'', o ``En la sección \ref{sec:ejemplo} se presenta lo que sea'', o ``En la subsección \ref{subsec:ejemplo} se discute otra cosa''.
-
-Entre párrafos sucesivos dejar un espacio, como el que se observa entre este párrafo y el anterior. Pero las oraciones de un mismo párrafo van en forma consecutiva, como se observa acá. Luego, cuando se quiere poner una lista tabulada se hace así:
-
-\begin{itemize}
-	\item Este es el primer elemento de la lista.
-	\item Este es el segundo elemento de la lista.
-\end{itemize}
-
-Notar el uso de las mayúsculas y el punto al final de cada elemento.
-
-Si se desea poner una lista numerada el formato es este:
-
-\begin{enumerate}
-	\item Este es el primer elemento de la lista.
-	\item Este es el segundo elemento de la lista.
-\end{enumerate}
-
-Notar el uso de las mayúsculas y el punto al final de cada elemento.
-
-\subsection{Este es el título de una subsección}
-\label{subsec:ejemplo}
-
-Se recomienda no utilizar \textbf{texto en negritas} en ningún párrafo, ni tampoco texto \underline{subrayado}. En cambio sí se sugiere utilizar \textit{texto en cursiva} donde se considere apropiado.
-
-Se sugiere que la escritura sea impersonal. Por ejemplo, no utilizar ``el diseño del firmware lo hice de acuerdo con tal principio'', sino ``el firmware fue diseñado utilizando tal principio''. En lo posible hablar en tiempo pasado, ya que la memoria describe un trabajo que ya fue realizado.
-
-Se recomienda no utilizar una sección de glosario sino colocar la descripción de las abreviaturas como parte del mismo cuerpo del texto. Por ejemplo, RTOS (\textit{Real Time Operating System}, Sistema Operativo de Tiempo Real) o en caso de considerarlo apropiado mediante notas a pie de página.
-
 Si se desea indicar alguna página web utilizar el siguiente formato de referencias bibliográficas, dónde las referencias se detallan en la sección de bibliografía de la memoria,utilizado el formato establecido por IEEE en \citep{IEEE:citation}. Por ejemplo, ``el presente trabajo se basa en la plataforma EDU-CIAA-NXP, la cual se describe en detalle en \citep{CIAA}''.
 
 \subsection{Figuras} 
 
-Al insertar figuras en la memoria se deben considerar determinadas pautas. Para empezar, usar siempre tipografía claramente legible. Luego, tener claro que es incorrecto escribir por ejemplo esto: ``El diseño elegido es un cuadrado, como se ve en la siguiente figura:''
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=.35]{./Figures/cuadradoAzul.png}
-\end{figure}
-
-La forma correcta de utilizar una figura es la siguiente: ``Se eligió utilizar un cuadrado azul para el logo, el cual se ilustra en la figura \ref{fig:cuadradoAzul}''.
+La forma correcta de utilizar una figura es la siguiente: ``Se eligió utilizar un cuadrado azul para el logo, el cual se ilustra en la figura \ref{fig:esquemaGeneral}''.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.35]{./Figures/cuadradoAzul.png}
-	\caption{Ilustración del cuadrado azul que se eligió para el diseño del logo.}
-	\label{fig:cuadradoAzul}
+	\includegraphics[scale=.35]{./Figures/esquemaGeneral.png}
+	\caption{Diagrama general del sistema.}
+	\label{fig:esquemaGeneral}
 \end{figure}
 
 El texto de las figuras debe estar siempre en español, excepto que se decida reproducir una figura original tomada de alguna referencia. En ese caso la referencia de la cual se tomó la figura debe ser indicada en el epígrafe de la figura e incluida como una nota al pie, como se ilustra en la figura \ref{fig:palabraIngles}.

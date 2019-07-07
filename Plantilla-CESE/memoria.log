@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  7 JUL 2019 01:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  7 JUL 2019 18:32
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1008,8 +1008,11 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
- (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
-(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
+ (Chapters/Chapter1.aux) (Chapters/Chapter2.aux
+
+LaTeX Warning: Label `fig:esquemaGeneral' multiply defined.
+
+) (Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
 \openout1 = `memoria.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -1263,7 +1266,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 125.
 
 1: section
-<./Figures/logoFIUBA.png, id=131, 220.825pt x 220.825pt>
+<./Figures/logoFIUBA.png, id=139, 220.825pt x 220.825pt>
 File: ./Figures/logoFIUBA.png Graphic file (type png)
 <use ./Figures/logoFIUBA.png>
 Package pdftex.def Info: ./Figures/logoFIUBA.png  used on input line 142.
@@ -1368,56 +1371,80 @@ LaTeX Info: Redefining \% on input line 238.
 
  (Chapters/Chapter2.tex
 Cap\'{\i }tulo 2.
+<./Figures/esquemaGeneral.png, id=265, 1284.8pt x 722.7pt>
+File: ./Figures/esquemaGeneral.png Graphic file (type png)
+<use ./Figures/esquemaGeneral.png>
+Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 21.
+(pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
+
+Overfull \hbox (59.88405pt too wide) in paragraph at lines 21--22
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 31.
+("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+
 1: section
 [3
 
 
 
-]
+ <./Figures/esquemaGeneral.png (PNG copy)>]
+LaTeX Info: Redefining \sptext on input line 137.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+ [4]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 143.
 
-LaTeX Warning: Citation 'IEEE:citation' on page 4 undefined on input line 54.
+
+LaTeX Warning: Citation 'IEEE:citation' on page 5 undefined on input line 153.
 
 
-LaTeX Warning: Citation 'CIAA' on page 4 undefined on input line 54.
+LaTeX Warning: Citation 'CIAA' on page 5 undefined on input line 153.
 
-<./Figures/cuadradoAzul.png, id=261, 180.675pt x 180.675pt>
-File: ./Figures/cuadradoAzul.png Graphic file (type png)
-<use ./Figures/cuadradoAzul.png>
-Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 62.
-(pdftex.def)             Requested size: 63.23718pt x 63.23718pt.
-File: ./Figures/cuadradoAzul.png Graphic file (type png)
-<use ./Figures/cuadradoAzul.png>
-Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 69.
-(pdftex.def)             Requested size: 63.23718pt x 63.23718pt.
-<./Figures/word.jpeg, id=264, 259.97125pt x 194.7275pt>
+File: ./Figures/esquemaGeneral.png Graphic file (type png)
+<use ./Figures/esquemaGeneral.png>
+Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 161.
+(pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
+
+Overfull \hbox (59.88405pt too wide) in paragraph at lines 161--162
+ [][] 
+ []
+
+<./Figures/word.jpeg, id=291, 259.97125pt x 194.7275pt>
 File: ./Figures/word.jpeg Graphic file (type jpg)
 <use ./Figures/word.jpeg>
-Package pdftex.def Info: ./Figures/word.jpeg  used on input line 78.
+Package pdftex.def Info: ./Figures/word.jpeg  used on input line 170.
 (pdftex.def)             Requested size: 64.99265pt x 48.68175pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 79.
+(Font)              <7> on input line 171.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 79.
+(Font)              <5> on input line 171.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 83.
-LaTeX Info: Redefining \sptext on input line 87.
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
-[4 <./Figures/cuadradoAzul.png>]
-<./Figures/questionMark.png, id=275, 225.84375pt x 225.84375pt>
+(Font)              <9> on input line 175.
+LaTeX Info: Redefining \sptext on input line 179.
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+[5]
+<./Figures/questionMark.png, id=307, 225.84375pt x 225.84375pt>
 File: ./Figures/questionMark.png Graphic file (type png)
 <use ./Figures/questionMark.png>
-Package pdftex.def Info: ./Figures/questionMark.png  used on input line 90.
+Package pdftex.def Info: ./Figures/questionMark.png  used on input line 182.
 (pdftex.def)             Requested size: 90.33589pt x 90.33589pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 99.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 191.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (50.38678pt too wide) in paragraph at lines 117--117
+Overfull \hbox (50.38678pt too wide) in paragraph at lines 209--209
 []\T1/pcr/m/n/10.95 \textbf{Especie}       & \textbf{Tamaño}  & \textbf{Valor a
 prox.}\\[] 
  []
@@ -1425,18 +1452,22 @@ prox.}\\[]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \sptext on input line 142.
-LaTeX Info: Redefining \. on input line 142.
-LaTeX Info: Redefining \% on input line 142.
-[5 <./Figures/word.jpeg> <./Figures/questionMark.png>])
+LaTeX Info: Redefining \sptext on input line 229.
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
+[6 <./Figures/word.jpeg> <./Figures/questionMark.png>])
 LaTeX Info: Redefining \sptext on input line 239.
 LaTeX Info: Redefining \. on input line 239.
 LaTeX Info: Redefining \% on input line 239.
- [6]
+ [7]
 \openout2 = `Chapters/Chapter3.aux'.
 
 
-(Chapters/Chapter3.tex
+(Chapters/Chapter3.tex [8
+
+
+
+]
 Cap\'{\i }tulo 3.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
@@ -1451,34 +1482,28 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 58.
 
 1: section
-[7
-
-
-
-]
+[9]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 97.
 )
 LaTeX Info: Redefining \sptext on input line 240.
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
- [8]
+ [10]
 \openout2 = `Chapters/Chapter4.aux'.
 
  (Chapters/Chapter4.tex
 Cap\'{\i }tulo 4.
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 11.
 )
 1: section
-[9
+[11
 
 
 
 ]
 \openout2 = `Chapters/Chapter5.aux'.
 
- (Chapters/Chapter5.tex [10
+ (Chapters/Chapter5.tex [12
 
 
 
@@ -1486,7 +1511,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
 Cap\'{\i }tulo 5.
 )
 1: section
-[11]
+[13]
 
 LaTeX Warning: Empty bibliography on input line 263.
 
@@ -1500,11 +1525,20 @@ LaTeX Info: Redefining \% on input line 30.
 (Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
-Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 56F712C92A9F6620EE276A32364A7758;5998.
 
+
+Package rerunfilecheck Warning: File `memoria.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `memoria.out':
+(rerunfilecheck)             Before: ED387AF0D23A59B731544630F0E8AA66;6502
+(rerunfilecheck)             After:  DE75BB55BF8C4C62C6C96D860578D9DC;6693.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -1516,14 +1550,62 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36571 strings out of 492970
- 730922 string characters out of 3126149
- 1158230 words of memory out of 3000000
- 39968 multiletter control sequences out of 15000+200000
+ 36624 strings out of 492970
+ 731640 string characters out of 3126149
+ 1158137 words of memory out of 3000000
+ 39984 multiletter control sequences out of 15000+200000
  588975 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,20n,75p,933b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+ 58i,20n,82p,933b,2168s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{equation.49} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.47} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.45} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.41} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.92} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.91} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.88} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.87} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.82} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.52} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.51} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.48} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.46} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.40} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.39} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.37} has been referenced but does not exi
 st, replaced by a fixed one
 
 {C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
@@ -1542,9 +1624,9 @@ ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (25 pages, 259951 bytes).
+Output written on memoria.pdf (27 pages, 368510 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
