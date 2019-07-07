@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  1 JUL 2019 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  7 JUL 2019 01:42
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1263,7 +1263,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 125.
 
 1: section
-<./Figures/logoFIUBA.png, id=119, 220.825pt x 220.825pt>
+<./Figures/logoFIUBA.png, id=131, 220.825pt x 220.825pt>
 File: ./Figures/logoFIUBA.png Graphic file (type png)
 <use ./Figures/logoFIUBA.png>
 Package pdftex.def Info: ./Figures/logoFIUBA.png  used on input line 142.
@@ -1291,26 +1291,19 @@ logoFIUBA.png>] [2
  Agradecimientos
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 202.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 201.
 1: section
 [5] [6
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 215.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 212.
  (memoria.toc
 LaTeX Info: Redefining \sptext on input line 2.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/sc' tried instead on input line 3.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 16.
-
-("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 16.
 )
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
@@ -1348,7 +1341,7 @@ LaTeX Info: Redefining \% on input line 2.
  Dedicatory
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/sl' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/sl' tried instead on input line 226.
+(Font)              Font shape `T1/ppl/b/sl' tried instead on input line 223.
 1: section
 [13] [14
 
@@ -1361,107 +1354,70 @@ Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 29.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 29.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 29.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 32.
 1: section
 [1
 
 
-]
-LaTeX Info: Redefining \sptext on input line 83.
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+])
+LaTeX Info: Redefining \sptext on input line 238.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
  [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 90.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 90.
-LaTeX Info: Redefining \sptext on input line 106.
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
- [3]
-<./Figures/texmaker.png, id=269, 1371.1225pt x 710.655pt>
-File: ./Figures/texmaker.png Graphic file (type png)
-<use ./Figures/texmaker.png>
-Package pdftex.def Info: ./Figures/texmaker.png  used on input line 137.
-(pdftex.def)             Requested size: 389.80269pt x 202.02911pt.
-LaTeX Info: Redefining \sptext on input line 140.
-LaTeX Info: Redefining \. on input line 140.
-LaTeX Info: Redefining \% on input line 140.
- [4]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 150.
-
-Overfull \hbox (4.00684pt too wide) in paragraph at lines 150--150
-[]\T1/ppl/b/n/14.4 Personalizando la plan-ti-lla en el ar-chi-vo \T1/pcr/b/n/14
-.4 memoria.tex 
- []
-
-LaTeX Info: Redefining \sptext on input line 155.
-LaTeX Info: Redefining \. on input line 155.
-LaTeX Info: Redefining \% on input line 155.
-[5 <./Figures/texmaker.png>]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 186.
-LaTeX Info: Redefining \sptext on input line 187.
-LaTeX Info: Redefining \. on input line 187.
-LaTeX Info: Redefining \% on input line 187.
- [6])
-LaTeX Info: Redefining \sptext on input line 241.
-LaTeX Info: Redefining \. on input line 241.
-LaTeX Info: Redefining \% on input line 241.
-LaTeX Font Info:    Font shape `T1/pcr/bx/sl' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 241.
- [7]
 \openout2 = `Chapters/Chapter2.aux'.
 
- (Chapters/Chapter2.tex [8
+ (Chapters/Chapter2.tex
+Cap\'{\i }tulo 2.
+1: section
+[3
 
 
 
 ]
-Cap\'{\i }tulo 2.
-1: section
-[9]
 
-LaTeX Warning: Citation 'IEEE:citation' on page 10 undefined on input line 55.
+LaTeX Warning: Citation 'IEEE:citation' on page 4 undefined on input line 54.
 
 
-LaTeX Warning: Citation 'CIAA' on page 10 undefined on input line 55.
+LaTeX Warning: Citation 'CIAA' on page 4 undefined on input line 54.
 
-<./Figures/cuadradoAzul.png, id=310, 180.675pt x 180.675pt>
+<./Figures/cuadradoAzul.png, id=261, 180.675pt x 180.675pt>
 File: ./Figures/cuadradoAzul.png Graphic file (type png)
 <use ./Figures/cuadradoAzul.png>
-Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 63.
+Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 62.
 (pdftex.def)             Requested size: 63.23718pt x 63.23718pt.
 File: ./Figures/cuadradoAzul.png Graphic file (type png)
 <use ./Figures/cuadradoAzul.png>
-Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 70.
+Package pdftex.def Info: ./Figures/cuadradoAzul.png  used on input line 69.
 (pdftex.def)             Requested size: 63.23718pt x 63.23718pt.
-<./Figures/word.jpeg, id=313, 259.97125pt x 194.7275pt>
+<./Figures/word.jpeg, id=264, 259.97125pt x 194.7275pt>
 File: ./Figures/word.jpeg Graphic file (type jpg)
 <use ./Figures/word.jpeg>
-Package pdftex.def Info: ./Figures/word.jpeg  used on input line 79.
+Package pdftex.def Info: ./Figures/word.jpeg  used on input line 78.
 (pdftex.def)             Requested size: 64.99265pt x 48.68175pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 80.
+(Font)              <7> on input line 79.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 79.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \sptext on input line 88.
-LaTeX Info: Redefining \. on input line 88.
-LaTeX Info: Redefining \% on input line 88.
-[10 <./Figures/cuadradoAzul.png>]
-<./Figures/questionMark.png, id=326, 225.84375pt x 225.84375pt>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 83.
+LaTeX Info: Redefining \sptext on input line 87.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+[4 <./Figures/cuadradoAzul.png>]
+<./Figures/questionMark.png, id=275, 225.84375pt x 225.84375pt>
 File: ./Figures/questionMark.png Graphic file (type png)
 <use ./Figures/questionMark.png>
-Package pdftex.def Info: ./Figures/questionMark.png  used on input line 91.
+Package pdftex.def Info: ./Figures/questionMark.png  used on input line 90.
 (pdftex.def)             Requested size: 90.33589pt x 90.33589pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 99.
 
-Overfull \hbox (50.38678pt too wide) in paragraph at lines 118--118
+("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (50.38678pt too wide) in paragraph at lines 117--117
 []\T1/pcr/m/n/10.95 \textbf{Especie}       & \textbf{Tamaño}  & \textbf{Valor a
 prox.}\\[] 
  []
@@ -1469,14 +1425,14 @@ prox.}\\[]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \sptext on input line 143.
-LaTeX Info: Redefining \. on input line 143.
-LaTeX Info: Redefining \% on input line 143.
-[11 <./Figures/word.jpeg> <./Figures/questionMark.png>])
-LaTeX Info: Redefining \sptext on input line 242.
-LaTeX Info: Redefining \. on input line 242.
-LaTeX Info: Redefining \% on input line 242.
- [12]
+LaTeX Info: Redefining \sptext on input line 142.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+[5 <./Figures/word.jpeg> <./Figures/questionMark.png>])
+LaTeX Info: Redefining \sptext on input line 239.
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
+ [6]
 \openout2 = `Chapters/Chapter3.aux'.
 
 
@@ -1495,25 +1451,34 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 58.
 
 1: section
-[13
-
-
-
-])
-\openout2 = `Chapters/Chapter4.aux'.
-
- (Chapters/Chapter4.tex [14
+[7
 
 
 
 ]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 97.
+)
+LaTeX Info: Redefining \sptext on input line 240.
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [8]
+\openout2 = `Chapters/Chapter4.aux'.
+
+ (Chapters/Chapter4.tex
 Cap\'{\i }tulo 4.
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 11.
 )
 1: section
-[15]
+[9
+
+
+
+]
 \openout2 = `Chapters/Chapter5.aux'.
 
- (Chapters/Chapter5.tex [16
+ (Chapters/Chapter5.tex [10
 
 
 
@@ -1521,34 +1486,25 @@ Cap\'{\i }tulo 4.
 Cap\'{\i }tulo 5.
 )
 1: section
-[17]
+[11]
 
-LaTeX Warning: Empty bibliography on input line 266.
+LaTeX Warning: Empty bibliography on input line 263.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
 (memoria.aux
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
  (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
 (Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
+Package rerunfilecheck Info: File `memoria.out' has not changed.
+(rerunfilecheck)             Checksum: 56F712C92A9F6620EE276A32364A7758;5998.
 
-
-Package rerunfilecheck Warning: File `memoria.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `memoria.out':
-(rerunfilecheck)             Before: 67D94C42541B59C03E735078296B5D71;5172
-(rerunfilecheck)             After:  F78F03D4F1A7D86A77578EFEE406630C;5955.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -1560,62 +1516,14 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36628 strings out of 492970
- 731626 string characters out of 3126149
- 1158615 words of memory out of 3000000
- 39988 multiletter control sequences out of 15000+200000
- 591346 words of font info for 123 fonts, out of 3000000 for 9000
+ 36571 strings out of 492970
+ 730922 string characters out of 3126149
+ 1158230 words of memory out of 3000000
+ 39968 multiletter control sequences out of 15000+200000
+ 588975 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,20n,77p,798b,2154s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{equation.42} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.41} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.39} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.34} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.33} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.78} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.77} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.76} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.75} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.74} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.44} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.43} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.40} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.38} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.31} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.27} has been referenced but does not exi
+ 57i,20n,75p,933b,2105s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
 {C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
@@ -1627,18 +1535,16 @@ ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Julian/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ju
 lian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/uc
-rb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/cou
-rier/ucrbo8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/courier/ucrr8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/urw/courier/ucrro8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julia
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (31 pages, 524049 bytes).
+rr8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/pal
+atino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on memoria.pdf (25 pages, 259951 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
- 258 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
