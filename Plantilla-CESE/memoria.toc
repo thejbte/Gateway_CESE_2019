@@ -15,23 +15,23 @@
 \contentsline {subsection}{\numberline {2.2.4}Otros requerimientos}{4}{subsection.32}
 \contentsline {section}{\numberline {2.3}IoT (\textit {internet of things})}{5}{section.36}
 \contentsline {section}{\numberline {2.4}Tecnolog\IeC {\'\i }as de comunicaci\IeC {\'o}n}{5}{section.37}
-\contentsline {subsection}{\numberline {2.4.1}Tecnolog\IeC {\'\i }a Sigfox}{5}{subsection.38}
-\contentsline {subsection}{\numberline {2.4.2}Tecnolog\IeC {\'\i }a Lora}{5}{subsection.39}
-\contentsline {section}{\numberline {2.5}Antecedentes}{5}{section.40}
-\contentsline {subsection}{\numberline {2.5.1}Figuras}{5}{subsection.41}
-\contentsline {subsection}{\numberline {2.5.2}Tablas}{6}{subsection.47}
-\contentsline {subsection}{\numberline {2.5.3}Ecuaciones}{7}{subsection.49}
-\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{9}{chapter.52}
-\contentsline {section}{\numberline {3.1}Modulos del sistema de hardware}{9}{section.53}
-\contentsline {subsection}{\numberline {3.1.1}Selecci\IeC {\'o}n de tecnolog\IeC {\'\i }as a usar.}{10}{subsection.83}
-\contentsline {subsection}{\numberline {3.1.2}Sintonizaci\IeC {\'o}n y verificaci\IeC {\'o}n de la antena.}{10}{subsection.84}
-\contentsline {subsection}{\numberline {3.1.3}Desarrollo de la capa de manejadores de dispsitivos(\textit {driver}).}{10}{subsection.85}
-\contentsline {subsection}{\numberline {3.1.4}Dise\IeC {\~n}o del firmware}{10}{subsection.86}
-\contentsline {subsection}{\numberline {3.1.5}Implementaci\IeC {\'o}n del firmware y herramientas a usar.}{10}{subsection.87}
-\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{11}{chapter.88}
-\contentsline {section}{\numberline {4.1}Pruebas unitarias de manejadores de dispositivos (\textit {driver})}{11}{section.89}
-\contentsline {section}{\numberline {4.2}Pruebas funcionales sobre el prototipo.}{11}{section.90}
-\contentsline {section}{\numberline {4.3}Pruebas de integraci\IeC {\'o}n.}{11}{section.91}
-\contentsline {chapter}{\numberline {5}Conclusiones}{13}{chapter.92}
-\contentsline {section}{\numberline {5.1}Conclusiones generales dle trabajo realizado.}{13}{section.93}
-\contentsline {section}{\numberline {5.2}Trabajo futuro.}{13}{section.94}
+\contentsline {subsection}{\numberline {2.4.1}Tecnolog\IeC {\'\i }a Sigfox}{6}{subsection.39}
+\contentsline {subsection}{\numberline {2.4.2}Tecnolog\IeC {\'\i }a Lora}{6}{subsection.40}
+\contentsline {section}{\numberline {2.5}Antecedentes}{6}{section.41}
+\contentsline {subsection}{\numberline {2.5.1}Figuras}{6}{subsection.42}
+\contentsline {subsection}{\numberline {2.5.2}Tablas}{7}{subsection.48}
+\contentsline {subsection}{\numberline {2.5.3}Ecuaciones}{8}{subsection.50}
+\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{9}{chapter.53}
+\contentsline {section}{\numberline {3.1}Modulos del sistema de hardware}{9}{section.54}
+\contentsline {subsection}{\numberline {3.1.1}Selecci\IeC {\'o}n de tecnolog\IeC {\'\i }as a usar.}{10}{subsection.84}
+\contentsline {subsection}{\numberline {3.1.2}Sintonizaci\IeC {\'o}n y verificaci\IeC {\'o}n de la antena.}{10}{subsection.85}
+\contentsline {subsection}{\numberline {3.1.3}Desarrollo de la capa de manejadores de dispsitivos(\textit {driver}).}{10}{subsection.86}
+\contentsline {subsection}{\numberline {3.1.4}Dise\IeC {\~n}o del firmware}{10}{subsection.87}
+\contentsline {subsection}{\numberline {3.1.5}Implementaci\IeC {\'o}n del firmware y herramientas a usar.}{10}{subsection.88}
+\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{11}{chapter.89}
+\contentsline {section}{\numberline {4.1}Pruebas unitarias de manejadores de dispositivos (\textit {driver})}{11}{section.90}
+\contentsline {section}{\numberline {4.2}Pruebas funcionales sobre el prototipo.}{11}{section.91}
+\contentsline {section}{\numberline {4.3}Pruebas de integraci\IeC {\'o}n.}{11}{section.92}
+\contentsline {chapter}{\numberline {5}Conclusiones}{13}{chapter.93}
+\contentsline {section}{\numberline {5.1}Conclusiones generales dle trabajo realizado.}{13}{section.94}
+\contentsline {section}{\numberline {5.2}Trabajo futuro.}{13}{section.95}
