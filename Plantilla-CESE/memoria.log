@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  10 JUL 2019 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  11 JUL 2019 19:46
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1008,11 +1008,8 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
- (Chapters/Chapter1.aux) (Chapters/Chapter2.aux
-
-LaTeX Warning: Label `fig:esquemaGeneral' multiply defined.
-
-) (Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
+ (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
+(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
 \openout1 = `memoria.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -1266,7 +1263,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 125.
 
 1: section
-<./Figures/logoFIUBA.png, id=143, 220.825pt x 220.825pt>
+<./Figures/logoFIUBA.png, id=119, 220.825pt x 220.825pt>
 File: ./Figures/logoFIUBA.png Graphic file (type png)
 <use ./Figures/logoFIUBA.png>
 Package pdftex.def Info: ./Figures/logoFIUBA.png  used on input line 142.
@@ -1356,104 +1353,97 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/sl' in size <14.4> not available
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 23.
+
+LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 24.
+
+
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 32.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 33.
 1: section
 [1
 
 
-])
+]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 67.
+
+
+LaTeX Warning: Citation 'centenaro2016long' on page 2 undefined on input line 6
+8.
+
+
+LaTeX Warning: Citation 'taylor2015world' on page 2 undefined on input line 72.
+
+
+LaTeX Info: Redefining \sptext on input line 76.
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+[2])
 LaTeX Info: Redefining \sptext on input line 238.
 LaTeX Info: Redefining \. on input line 238.
 LaTeX Info: Redefining \% on input line 238.
- [2]
+ [3]
 \openout2 = `Chapters/Chapter2.aux'.
 
- (Chapters/Chapter2.tex
+ (Chapters/Chapter2.tex [4
+
+
+
+]
 Cap\'{\i }tulo 2.
-<./Figures/esquemaGeneral.png, id=272, 1284.8pt x 722.7pt>
-File: ./Figures/esquemaGeneral.png Graphic file (type png)
-<use ./Figures/esquemaGeneral.png>
-Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 21.
-(pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-
-Overfull \hbox (59.88405pt too wide) in paragraph at lines 21--22
- [][] 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 13.
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
-
-1: section
-[3
-
-
-
- <./Figures/esquemaGeneral.png (PNG copy)>]
-LaTeX Info: Redefining \sptext on input line 137.
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
- [4]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 143.
-
-
-LaTeX Warning: Citation 'IEEE:citation' on page 5 undefined on input line 189.
-
-
-LaTeX Warning: Citation 'CIAA' on page 5 undefined on input line 189.
-
-LaTeX Info: Redefining \sptext on input line 190.
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
-[5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+<./Figures/esquemaGeneral.png, id=248, 1284.8pt x 722.7pt>
 File: ./Figures/esquemaGeneral.png Graphic file (type png)
 <use ./Figures/esquemaGeneral.png>
-Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 197.
+Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 20.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
 
-Overfull \hbox (59.88405pt too wide) in paragraph at lines 197--198
+Overfull \hbox (59.88405pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-<./Figures/word.jpeg, id=306, 259.97125pt x 194.7275pt>
+1: section
+[5 <./Figures/esquemaGeneral.png (PNG copy)>]
+LaTeX Info: Redefining \sptext on input line 130.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [6]
+
+LaTeX Warning: Citation 'IEEE:citation' on page 7 undefined on input line 143.
+
+
+LaTeX Warning: Citation 'CIAA' on page 7 undefined on input line 143.
+
+<./Figures/word.jpeg, id=277, 259.97125pt x 194.7275pt>
 File: ./Figures/word.jpeg Graphic file (type jpg)
 <use ./Figures/word.jpeg>
-Package pdftex.def Info: ./Figures/word.jpeg  used on input line 206.
+Package pdftex.def Info: ./Figures/word.jpeg  used on input line 160.
 (pdftex.def)             Requested size: 64.99265pt x 48.68175pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 207.
+(Font)              <7> on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 207.
+(Font)              <5> on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 211.
-LaTeX Info: Redefining \sptext on input line 215.
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
-[6 <./Figures/word.jpeg>]
-<./Figures/questionMark.png, id=315, 225.84375pt x 225.84375pt>
+(Font)              <9> on input line 165.
+<./Figures/questionMark.png, id=281, 225.84375pt x 225.84375pt>
 File: ./Figures/questionMark.png Graphic file (type png)
 <use ./Figures/questionMark.png>
-Package pdftex.def Info: ./Figures/questionMark.png  used on input line 218.
+Package pdftex.def Info: ./Figures/questionMark.png  used on input line 172.
 (pdftex.def)             Requested size: 90.33589pt x 90.33589pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 227.
+LaTeX Info: Redefining \sptext on input line 178.
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
+[7 <./Figures/word.jpeg> <./Figures/questionMark.png>]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 200.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (50.38678pt too wide) in paragraph at lines 245--245
-[]\T1/pcr/m/n/10.95 \textbf{Especie}       & \textbf{Tamaño}  & \textbf{Valor a
-prox.}\\[] 
- []
-
-LaTeX Info: Redefining \sptext on input line 264.
-LaTeX Info: Redefining \. on input line 264.
-LaTeX Info: Redefining \% on input line 264.
-[7 <./Figures/questionMark.png>])
+))
 LaTeX Info: Redefining \sptext on input line 239.
 LaTeX Info: Redefining \. on input line 239.
 LaTeX Info: Redefining \% on input line 239.
@@ -1523,13 +1513,10 @@ LaTeX Info: Redefining \% on input line 30.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: DE142E47718DA5D81AEF46A1A2D8B3B0;6693.
+(rerunfilecheck)             Checksum: 620A8E93543F1CE09E62A3C56C872E2F;5248.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -1541,13 +1528,13 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36617 strings out of 492970
- 731561 string characters out of 3126149
- 1158179 words of memory out of 3000000
- 39992 multiletter control sequences out of 15000+200000
+ 36597 strings out of 492970
+ 731284 string characters out of 3126149
+ 1157205 words of memory out of 3000000
+ 39979 multiletter control sequences out of 15000+200000
  588975 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,20n,77p,933b,2168s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,20n,77p,798b,2166s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1567,9 +1554,9 @@ ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (27 pages, 370083 bytes).
+Output written on memoria.pdf (27 pages, 366465 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 424 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

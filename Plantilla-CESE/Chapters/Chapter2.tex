@@ -10,8 +10,7 @@ En este capitulo se muestra la idea general del proyecto y se describen las cara
 
 %\label{sec:ejemplo}
 
-El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}.
-
+El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}. El sistema se compone de un microcontrolador ARM(\textit{Advanced RISC Machine}) Cortex\textregistered -M4 y dos bus UART(\textit{Universal Asynchronous Receiver-Transmitter}) para que el sistema pueda tener una arquitectura modular que le permite incorporar nuevas tecnologías de comunicación para transmitir inalambricamente tales como: SigFox, LoRa, Nb-IOT, Cat-M, WiFi y 3G.
 
 
 \begin{figure}[h]
@@ -27,21 +26,13 @@ El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}.
 \end{figure}
 
 
-
-El sistema se compone de un microcontrolador ARM(\textit{Advanced RISC Machine}) Cortex\textregistered -M4, dos bus UART(\textit{Universal Asynchronous Receiver-Transmitter}) para que el sistema pueda tener una arquitectura modular que le permite incorporar nuevas tecnologías de comunicación para transmitir inalambricamente tales como: SigFox, LoRa, Nb-IOT, Cat-M, WiFi y 3G.
-
-También consta de un medidor de voltaje para batería de LiPo, 2 entradas analógicas de tensión, 1 de corriente y 5 entradas digitales con el fin de poder adquirir datos de diferentes variables en los procesos industriales.
-
-
-
-
-
+El sistema consta de un medidor de voltaje para batería de LiPo, dos entradas analógicas de tensión, una de corriente y cinco entradas digitales con el fin de poder adquirir datos de diferentes variables en los procesos industriales. El dispositivo esta diseñado para tener diferentes funcionalidades sin embargo debido a la delimitación del alcance del trabajo no se tubo en cuenta los subsitemas que se observan en gris en la figura \ref{fig:esquemaGeneral}.
 
 
 \section{Requerimientos}
+Los siguientes son los requerimientos del presente trabajo:
 
-\subsection{Grupo de requerimientos asociados al hardware}
-
+\textbf{Grupo de requerimientos asociados al hardware:}
 \begin{enumerate}
 
 	\item Microcontrolador.
@@ -86,17 +77,19 @@ También consta de un medidor de voltaje para batería de LiPo, 2 entradas anal�
 
 		\end{itemize}
 
-		\item El sistema debe tener dos (2) entradas analógicas de voltaje de 0-12 Vdc.
+		\item El sistema debe tener una (1) entrada analógica de voltaje de 0-5 Vdc.
+		
+		\item El sistema debe tener una (1) entrada analógica de voltaje de 0-10 Vdc.
 
 		\item El sistema debe tener una (1) entradas analógicas de corriente 4-20 mA.
 
-		\item El sistema debe tener cinco (5) entradas digitales 0-24 Vdc.
+		\item El sistema debe tener cinco (5) entradas digitales 3.3-24 Vdc.
 
 \end{enumerate}
 
 
 
-\subsection{Grupo de requerimientos asociados al módulo Sigfox.}
+\textbf{Grupo de requerimientos asociados al módulo Sigfox:}
 
 	\begin{enumerate}
 
@@ -112,7 +105,7 @@ También consta de un medidor de voltaje para batería de LiPo, 2 entradas anal�
 
 
 
-\subsection{Grupo de requerimientos asociados al módulo Lora}
+\textbf{Grupo de requerimientos asociados al módulo Lora:}
 
 	\begin{enumerate}
 
@@ -124,7 +117,7 @@ También consta de un medidor de voltaje para batería de LiPo, 2 entradas anal�
 
 
 
-\subsection{Otros requerimientos}
+\textbf{Otros requerimientos:}
 
 \begin{enumerate}
 
@@ -138,53 +131,14 @@ También consta de un medidor de voltaje para batería de LiPo, 2 entradas anal�
 
 
 
+\subsection{Sigfox}
+Contexto y explicación  completo de que es Sigfox...
+Contexto y explicación  completo de que es Sigfox...
+Contexto y explicación  completo de que es Sigfox...
+\subsection{Lora}
+Contexto y explicacióncompleto de que es Lora...
 
-
-\section{IoT (\textit{internet of things})}
-El concepto de internet de las cosas se refiere a la interconexión digital de dispositivos y objetos  a través  de una red. Estos dispositivos tienen la capacidad de adquirir, intercambiar y transferir datos a la red mediante alguna tecnología de comunicación inalambrica.
-
-En mundo "todo lo que se pueda conectar estará conectado”. IoT es una tendencia imparable y puede facilitar mucho la vida diaria. IoT hace que estas conexiones sean posibles. Produce formas baratas y efectivas de resolver grandes problemas sociales, como el acceso a la energía, el transporte y la vivienda. IoT puede hacernos sentir más cómodos en nuestros hogares y en nuestras ciudades.
-
-\section{Tecnologías de comunicación}
-Uno de los principales habilitadores de un proyecto de internet de las cosas son las redes de comunicaciones, estas permiten conectar dispositivos, máquinas, sensores o “cosas” los cuales generan datos o información desde cualquier punto geográfico del planeta. Las redes de comunicacion son un conjunto de medios tecnicos que permiten la comunicación entre equipos que se encuentran a distancia.
-
-Caracteristicas de una red de comunicación IoT :
-\begin{itemize}
-	\item Baja tasa de datos.
-	\item Bajo consumo de energía.
-	\item Largo alcance de comunicación.
-	\item Conexiones bidireccionales.
-	\item Movilidad y servicios de localización.
-
-\end{itemize}
-
-En la tabla \ref{tab:Tecno} se puede observar una comparación de las principales tecnologías de comunicación.
-
-\begin{table}[h]
-	\centering
-	\caption[caption corto]{Redes de comunicación más utilizadas para proyectos IoT}
-	\begin{tabular}{l c c c}    
-		\toprule
-		\textbf{Tecnología} 	 & \textbf{Consumo}  & \textbf{Alcance} 	& \textbf{Tasa de Datos} \\
-		\midrule
-		GSM/GPRS				 & Muy alto			& Alto					&	Alta \\		
-		SigFox					 & Bajo				& Medio/alto			&	Muy baja \\
-		Lora					 & Bajo				& Medio/alto			&	Muy baja\\	
-		Wifi					 & Alto				& Bajo					&	Muy alta \\
-		BLE					 	 & Muy bajo			& Muy Bajo				&	Baja \\
-		ZigBee					 & Medio			& Bajo					&	Baja \\	
-		\bottomrule
-		\hline
-	\end{tabular}
-	\label{tab:Tecno}
-\end{table}
-
-
-\subsection{Tecnología Sigfox}
-
-\subsection{Tecnología Lora}
-
-\section{Antecedentes}
+%\section{Antecedentes}
 
 Si se desea indicar alguna página web utilizar el siguiente formato de referencias bibliográficas, dónde las referencias se detallan en la sección de bibliografía de la memoria,utilizado el formato establecido por IEEE en \citep{IEEE:citation}. Por ejemplo, ``el presente trabajo se basa en la plataforma EDU-CIAA-NXP, la cual se describe en detalle en \citep{CIAA}''.
 
@@ -192,12 +146,12 @@ Si se desea indicar alguna página web utilizar el siguiente formato de referenc
 
 La forma correcta de utilizar una figura es la siguiente: ``Se eligió utilizar un cuadrado azul para el logo, el cual se ilustra en la figura \ref{fig:esquemaGeneral}''.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=.35]{./Figures/esquemaGeneral.png}
-	\caption{Diagrama general del sistema.}
-	\label{fig:esquemaGeneral}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[scale=.35]{./Figures/esquemaGeneral.png}
+%	\caption{Diagrama general del sistema.}
+%	\label{fig:esquemaGeneral}
+%\end{figure}
 
 El texto de las figuras debe estar siempre en español, excepto que se decida reproducir una figura original tomada de alguna referencia. En ese caso la referencia de la cual se tomó la figura debe ser indicada en el epígrafe de la figura e incluida como una nota al pie, como se ilustra en la figura \ref{fig:palabraIngles}.
 
@@ -221,46 +175,6 @@ La figura y el epígrafe deben conformar una unidad cuyo significado principal p
 \end{figure}
 
 Nunca colocar una figura en el documento antes de hacer la primera referencia a ella, como se ilustra con la figura \ref{fig:questionMark}, porque sino el lector no comprenderá por qué de pronto aparece la figura en el documento, lo que distraerá su atención.
-
-\subsection{Tablas}
-
-Para las tablas utilizar el mismo formato que para las figuras, sólo que el epígrafe se debe colocar arriba de la tabla, como se ilustra en la tabla \ref{tab:peces}. Observar que sólo algunas filas van con líneas visibles y notar el uso de las negritas para los encabezados.  La referencia se logra utilizando el comando \verb|\ref{<label>}| donde label debe estar definida dentro del entorno de la tabla.
-
-\begin{verbatim}
-\begin{table}[h]
-	\centering
-	\caption[caption corto]{caption largo más descriptivo}
-	\begin{tabular}{l c c}    
-		\toprule
-		\textbf{Especie}       & \textbf{Tamaño}  & \textbf{Valor aprox.}\\
-		\midrule
-		Amphiprion Ocellaris	  & 10 cm 			& \$ 6.000 \\		
-		Hepatus Blue Tang      & 15 cm			 & \$ 7.000 \\
-		Zebrasoma Xanthurus    & 12 cm			 & \$ 6.800 \\
-		\bottomrule
-		\hline
-	\end{tabular}
-	\label{tab:peces}
-\end{table}
-\end{verbatim}
-
-\begin{table}[h]
-	\centering
-	\caption[caption cto]{caption largo más descriptivo}
-	\begin{tabular}{l c c}    
-		\toprule
-		\textbf{Especie} 	 & \textbf{Tamaño}  & \textbf{Valor aprox.}  \\
-		\midrule
-		Amphiprion Ocellaris	 & 10 cm 			& \$ 6.000 \\		
-		Hepatus Blue Tang	 & 15 cm				& \$ 7.000 \\
-		Zebrasoma Xanthurus	 & 12 cm				& \$ 6.800 \\
-		\bottomrule
-		\hline
-	\end{tabular}
-	\label{tab:peces}
-\end{table}
-
-En cada capítulo se debe reiniciar el número de conteo de las figuras y las tablas, por ejemplo, Fig. 2.1 o Tabla 2.1, pero no se debe reiniciar el conteo en cada sección. Por suerte la plantilla se encarga de esto por nosotros.
 
 \subsection{Ecuaciones}
 \label{sec:Ecuaciones}

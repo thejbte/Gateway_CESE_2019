@@ -1,7 +1,7 @@
 % Chapter 1
 
 \chapter{Introducción General} % Main chapter title
-En este capítulo se menciona la problematica que motivo la realización del presente trabajo, los procedimientos de la toma de datos en la industría actualmente y el enfoque elegido para desarrollar el prototipo que ofrece una solución usando sistemas embebidos.
+En este capítulo se menciona la problematica que motivó la realización del presente trabajo, los procedimientos de la toma de datos en la industría actualmente y el enfoque elegido para desarrollar el prototipo que ofrece una solución usando sistemas embebidos.
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 \label{IntroGeneral}
 
@@ -21,10 +21,11 @@ En este capítulo se menciona la problematica que motivo la realización del pre
 
 %----------------------------------------------------------------------------------------
 \section{Motivación}
-En el transcurso de la próxima decada se espera un gran crecimiento en la cantidad de dispositivos IoT provenientes de redes LPWAN (\textit{Low-Power Wide Area Network}). Para el 2025, se espera que más de 2 mil millones de dispositivos se conecten a través de LPWAN. Las principales tecnologías, que prometen una vida útil alta de la batería de los dispositivos y un alcance de hasta 15 kilómetros, son Sigfox, Lora y NB-IoT, que actualmente están conectados en todo el mundo con más de 25 millones de dispositivos, brindando servicio y facilitando las experiencias del usuario.
+En el transcurso de la próxima decada se espera un gran crecimiento en la cantidad de dispositivos IoT (\textit{internet of things}) provenientes de redes LPWAN (\textit{Low-Power Wide Area Network}). Para el 2025, se espera que más de 100 billones de dispositivos se conecten a través de LPWAN\cite{taylor2015world}. Las principales tecnologías, que prometen una vida útil alta de la batería de los dispositivos y un alcance de hasta 15 kilómetros, son Sigfox, Lora y NB-IoT, que actualmente están conectados en todo el mundo con más de 25 millones de dispositivos, brindando servicio y facilitando las experiencias del usuario.
 
+En los procesos industriales se tiene mucha información de variables físicas y eléctricas por medio de sensores, la cual muchas veces no se aprovecha debido a que no se tiene una optima trazabilidad de la misma o simplemente se pierde esta información. Cuando los procesos criticos fallan, necesitan una reacción inmediata por parte de una persona y esto nos genera una dependencia de alguien que no siempre va a estar las 24 horas del día al pendiente, quizá por costos para las mismas empresas.
 
-En los procesos industriales se tienen mucha información de variables físicas y eléctricas por medio de sensores la cual muchas veces no se aprovecha debido a que no se tiene una optima trazabilidad de la misma o simplemente se pierde esta información, también pasa que en los procesos que son críticos cuando fallan necesitan una reacción inmediata por parte de una persona y esto nos genera una dependencia de alguien que no siempre va a estar las 24 horas del día al pendiente, quizá por costos para las mismas empresas. En vista de lo de anterior se desarrolló un prototipo para ofrecer una solución que permita monitorear inalambricamente diferentes variables en los procesos industriales, La cual trasmite a una plataforma donde esta hace lo mismo a los usuarios interesados para que puedan estar informados y garanticen la correcta funcionalidad de sus procesos.
+En vista de lo de anterior se desarrolló un prototipo para ofrecer una solución que permita monitorear inalambricamente diferentes variables en los procesos industriales de esta manera los usuarios pueden estar informados y garantizan la correcta funcionalidad de sus procesos.
 
 %https://iot-analytics.com/state-of-the-iot-update-q1-q2-2018-number-of-iot-devices-now-7b/
 \section{Objetivos y alcance}
@@ -44,7 +45,7 @@ En la presente solución se contempla:
 	\item 5 entradas digitales.
 	\item La escritura del firmware del dispositivo.
 	\item La transmisión de la información por medio de Sigfox.
-	\item La transmisión de la información por medio de Lora.\emph{Esto depende del gateway TBD}
+	\item La transmisión de la información por medio de Lora.
 	\item La visualización de la información en una plataforma paga o libre.
 	\item Se incluye partes del código de la biblioteca usada para el modulo Sigfox.
 \end{itemize}
@@ -53,19 +54,71 @@ En la presente solución no se contempla:
 	\item El desarrollo de la plataforma web que permite visualizar los datos en linea.
 	\item Caja plástica del dispositivo.
 \end{itemize}
-En La presente solución no se incluye:
+En la presente solución no se incluye:
 \begin{itemize}
 	\item Diagramas esquemáticos.
 	\item PCB \textit{layout}.
 	\item Firmware.
 \end{itemize}
 
-Esto debido a que hacen parte de la propiedad intelectual de Tecrea SAS.
+Esto debido a que la propiedad intelectual es de Tecrea SAS.
 
+
+\section{IoT (\textit{internet of things})}
+El concepto de internet de las cosas se refiere a la interconexión digital de dispositivos y objetos  a través  de una red, es decir, dispositivos como sensores y / o actuadores, equipados con una interfaz de comunicación, unidades de procesamiento y almacenamiento\cite{centenaro2016long}. Estos dispositivos tienen la capacidad de adquirir, intercambiar y transferir datos a la red mediante alguna tecnología de comunicación inalambrica.
+
+
+
+IoT es una tendencia imparable y puede facilitar mucho la vida diaria. IoT hace que estas conexiones sean posibles. Produce formas baratas y efectivas de resolver grandes problemas sociales, como el acceso a la energía, el transporte y la vivienda. Otras aplicaciones pueden ser \textit{wearables}, construcciones y domoticas, \textit{smart cities}, \textit{smart manufacturing}\citep{taylor2015world}. IoT puede hacernos sentir más cómodos en nuestros hogares y en nuestras ciudades.
+
+\section{Tecnologías de comunicación}
+Uno de los principales habilitadores de un proyecto de internet de las cosas son las redes de comunicaciones. Estas permiten conectar dispositivos, máquinas, sensores o “cosas” los cuales generan datos o información desde cualquier punto geográfico del planeta. Las redes de comunicacion son un conjunto de medios tecnicos que permiten la comunicación entre equipos que se encuentran a distancia.
+
+Las principales caracteristicas de una red de comunicación IoT son:
+\begin{itemize}
+	\item Baja tasa de datos.
+	\item Bajo consumo de energía.
+	\item Largo alcance de comunicación.
+	\item Conexiones bidireccionales.
+	\item Movilidad y servicios de localización.
+
+\end{itemize}
+
+En la tabla \ref{tab:Tecno} se puede observar una comparación de las principales tecnologías de comunicación.
+
+\begin{table}[h]
+	\centering
+	\caption[Redes de comunicación]{Redes de comunicación más utilizadas para proyectos IoT}
+	\begin{tabular}{l c c c}    
+		\toprule
+		\textbf{Tecnología} 	 & \textbf{Consumo}  & \textbf{Alcance} 	& \textbf{Tasa de Datos} \\
+		\midrule
+		GSM/GPRS				 & Muy alto			& Alto					&	Alta \\		
+		SigFox					 & Bajo				& Medio/alto			&	Muy baja \\
+		Lora					 & Bajo				& Medio/alto			&	Muy baja\\	
+		Wifi					 & Alto				& Bajo					&	Muy alta \\
+		BLE					 	 & Muy bajo			& Muy Bajo				&	Baja \\
+		ZigBee					 & Medio			& Bajo					&	Baja \\	
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:Tecno}
+\end{table}
+
+\textbf{Tecnología GSM/GPRS:}
+
+Introducción corta  de que es ...
+
+\textbf{Tecnología Wifi:}
+
+Introducción corta de que es ...
+
+\textbf{Tecnología BLE:}
+
+Introducción corta de que es ...
+
+\textbf{Tecnología ZigBee:}
+
+Introducción corta de que es ...
 %----------------------------------------------------------------------------------------
-
-
-
-
-
 
