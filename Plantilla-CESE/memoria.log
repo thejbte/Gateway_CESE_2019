@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  12 JUL 2019 01:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  13 JUL 2019 17:54
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1347,8 +1347,6 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/sl' in size <14.4> not available
 
 ]
 1: section
-\openout2 = `Chapters/Chapter1.aux'.
-
 (Chapters/Chapter1.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
@@ -1357,65 +1355,61 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 24.
 
 
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 33.
+
+LaTeX Warning: Citation 'iotanalytics' on page 1 undefined on input line 24.
+
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 33.
+
+LaTeX Warning: Citation 'centenaro2016long' on page 1 undefined on input line 3
+4.
+
+
+LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 38.
+
+
 1: section
 [1
 
-
 ]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 67.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 40.
 
 
-LaTeX Warning: Citation 'centenaro2016long' on page 2 undefined on input line 6
-8.
+LaTeX Warning: Citation 'bettstetter1999gsm' on page 2 undefined on input line 
+79.
 
 
-LaTeX Warning: Citation 'taylor2015world' on page 2 undefined on input line 72.
+LaTeX Warning: Citation 'henry2002wifi' on page 2 undefined on input line 83.
 
-
-LaTeX Info: Redefining \sptext on input line 76.
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Info: Redefining \sptext on input line 84.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
 [2]
 
-LaTeX Warning: Citation 'bettstetter1999gsm' on page 3 undefined on input line 
-113.
-
-
-LaTeX Warning: Citation 'henry2002wifi' on page 3 undefined on input line 117.
-
-
 LaTeX Warning: Citation 'chang2014bluetooth' on page 3 undefined on input line 
-121.
-
-LaTeX Info: Redefining \sptext on input line 122.
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
-[3]
-
-LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 126.
+87.
 
 
+LaTeX Warning: Citation 'ramya2011study' on page 3 undefined on input line 92.
 
-LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 128.
 
+LaTeX Warning: Citation 'ramya2011study' on page 3 undefined on input line 94.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 130.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 96.
 
-LaTeX Warning: Citation 'adhikary2016performance' on page 4 undefined on input 
-line 135.
+LaTeX Warning: Citation 'adhikary2016performance' on page 3 undefined on input 
+line 101.
 
-)
-LaTeX Info: Redefining \sptext on input line 238.
-LaTeX Info: Redefining \. on input line 238.
-LaTeX Info: Redefining \% on input line 238.
+LaTeX Info: Redefining \sptext on input line 112.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+[3]) (Chapters/Chapter2.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
  [4]
-\openout2 = `Chapters/Chapter2.aux'.
-
- (Chapters/Chapter2.tex
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 13.
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
@@ -1423,7 +1417,7 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-<./Figures/esquemaGeneral.png, id=248, 1284.8pt x 722.7pt>
+<./Figures/esquemaGeneral.png, id=251, 1284.8pt x 722.7pt>
 File: ./Figures/esquemaGeneral.png Graphic file (type png)
 <use ./Figures/esquemaGeneral.png>
 Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 20.
@@ -1436,8 +1430,6 @@ Overfull \hbox (59.88405pt too wide) in paragraph at lines 20--21
 1: section
 [5
 
-
-
  <./Figures/esquemaGeneral.png (PNG copy)>]
 LaTeX Info: Redefining \sptext on input line 130.
 LaTeX Info: Redefining \. on input line 130.
@@ -1449,7 +1441,7 @@ LaTeX Warning: Citation 'IEEE:citation' on page 7 undefined on input line 143.
 
 LaTeX Warning: Citation 'CIAA' on page 7 undefined on input line 143.
 
-<./Figures/word.jpeg, id=277, 259.97125pt x 194.7275pt>
+<./Figures/word.jpeg, id=280, 259.97125pt x 194.7275pt>
 File: ./Figures/word.jpeg Graphic file (type jpg)
 <use ./Figures/word.jpeg>
 Package pdftex.def Info: ./Figures/word.jpeg  used on input line 160.
@@ -1460,7 +1452,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 165.
-<./Figures/questionMark.png, id=281, 225.84375pt x 225.84375pt>
+<./Figures/questionMark.png, id=284, 225.84375pt x 225.84375pt>
 File: ./Figures/questionMark.png Graphic file (type png)
 <use ./Figures/questionMark.png>
 Package pdftex.def Info: ./Figures/questionMark.png  used on input line 172.
@@ -1473,14 +1465,11 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 200.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-LaTeX Info: Redefining \sptext on input line 239.
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+)) (Chapters/Chapter3.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
  [8]
-\openout2 = `Chapters/Chapter3.aux'.
-
- (Chapters/Chapter3.tex
 Cap\'{\i }tulo 3.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
@@ -1497,56 +1486,52 @@ nput line 58.
 1: section
 [9
 
-
-
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 97.
-)
-LaTeX Info: Redefining \sptext on input line 240.
-LaTeX Info: Redefining \. on input line 240.
-LaTeX Info: Redefining \% on input line 240.
+) (Chapters/Chapter4.tex
+LaTeX Info: Redefining \sptext on input line 3.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
  [10]
-\openout2 = `Chapters/Chapter4.aux'.
-
- (Chapters/Chapter4.tex
 Cap\'{\i }tulo 4.
-)
+) (Chapters/Chapter5.tex
 1: section
 [11
 
-
-
-]
-\openout2 = `Chapters/Chapter5.aux'.
-
- (Chapters/Chapter5.tex [12
-
-
+] [12
 
 ]
 Cap\'{\i }tulo 5.
 )
-1: section
-[13]
 
 LaTeX Warning: Empty bibliography on input line 263.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+1: section
+[13]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
-(memoria.aux
+ (memoria.aux
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
- (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
-(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
-Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 620A8E93543F1CE09E62A3C56C872E2F;5248.
 
+
+Package rerunfilecheck Warning: File `memoria.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `memoria.out':
+(rerunfilecheck)             Before: 542983464ED727901BA0CAA192777396;5219
+(rerunfilecheck)             After:  C48FDE68D076514EB2C7CDD859B303A0;5252.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -1558,14 +1543,23 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36600 strings out of 492970
- 731326 string characters out of 3126149
- 1157509 words of memory out of 3000000
+ 36593 strings out of 492970
+ 730803 string characters out of 3126149
+ 1157483 words of memory out of 3000000
  39981 multiletter control sequences out of 15000+200000
  590571 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,20n,77p,816b,2166s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+ 56i,20n,75p,816b,2166s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{table.caption.15} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.14} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12} has been referenced but does not exi
 st, replaced by a fixed one
 
 {C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
@@ -1584,9 +1578,9 @@ ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (27 pages, 372078 bytes).
+Output written on memoria.pdf (27 pages, 371914 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

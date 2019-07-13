@@ -5,12 +5,12 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-En este capitulo se muestra la idea general del proyecto y se describen las características principales de la solución implementada.
+En este capitulo se presenta la idea general del proyecto y se describen las características principales de la solución implementada.
 \section{Estructura general del sistema}
 
 %\label{sec:ejemplo}
 
-El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}. El sistema se compone de un microcontrolador ARM(\textit{Advanced RISC Machine}) Cortex\textregistered -M4 y dos bus UART(\textit{Universal Asynchronous Receiver-Transmitter}) para que el sistema pueda tener una arquitectura modular que le permite incorporar nuevas tecnologías de comunicación para transmitir inalambricamente tales como: SigFox, LoRa, Nb-IOT, Cat-M, WiFi y 3G.
+El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}. El sistema se compone de un microcontrolador ARM(\textit{Advanced RISC Machine}) Cortex\textregistered -M4 y dos bus UART(\textit{Universal Asynchronous Receiver-Transmitter}). De esta forma el sistema puede tener una arquitectura modular que le permite incorporar nuevas tecnologías de comunicación para transmitir inalambricamente tales como: SigFox, LoRa, Nb-IOT, Cat-M, WiFi y 3G.
 
 
 \begin{figure}[h]
@@ -26,7 +26,7 @@ El diagrama general del sistema se muestra en figura \ref{fig:esquemaGeneral}. E
 \end{figure}
 
 
-El sistema consta de un medidor de voltaje para batería de LiPo, dos entradas analógicas de tensión, una de corriente y cinco entradas digitales con el fin de poder adquirir datos de diferentes variables en los procesos industriales. El dispositivo esta diseñado para tener diferentes funcionalidades sin embargo debido a la delimitación del alcance del trabajo no se tubo en cuenta los subsitemas que se observan en gris en la figura \ref{fig:esquemaGeneral}.
+El sistema consta de un medidor de voltaje para batería de LiPo, dos entradas analógicas de tensión, una de corriente y cinco entradas digitales con el fin de poder adquirir datos de diferentes variables en los procesos industriales. El dispositivo esta diseñado para tener diferentes funcionalidades sin embargo debido a la delimitación del alcance del trabajo no se implementaron los subsistemas que se observan en gris en la figura \ref{fig:esquemaGeneral}.
 
 
 \section{Requerimientos}
