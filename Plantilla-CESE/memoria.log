@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  12 JUL 2019 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  12 JUL 2019 01:16
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1381,32 +1381,32 @@ LaTeX Info: Redefining \% on input line 76.
 [2]
 
 LaTeX Warning: Citation 'bettstetter1999gsm' on page 3 undefined on input line 
-115.
+113.
 
 
-LaTeX Warning: Citation 'henry2002wifi' on page 3 undefined on input line 119.
+LaTeX Warning: Citation 'henry2002wifi' on page 3 undefined on input line 117.
 
 
 LaTeX Warning: Citation 'chang2014bluetooth' on page 3 undefined on input line 
-123.
+121.
 
-LaTeX Info: Redefining \sptext on input line 124.
-LaTeX Info: Redefining \. on input line 124.
-LaTeX Info: Redefining \% on input line 124.
+LaTeX Info: Redefining \sptext on input line 122.
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
 [3]
+
+LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 126.
+
+
 
 LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 128.
 
 
-
-LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 130.
-
-
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 132.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 130.
 
 LaTeX Warning: Citation 'adhikary2016performance' on page 4 undefined on input 
-line 137.
+line 135.
 
 )
 LaTeX Info: Redefining \sptext on input line 238.
@@ -1560,7 +1560,7 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 Here is how much of TeX's memory you used:
  36600 strings out of 492970
  731326 string characters out of 3126149
- 1158509 words of memory out of 3000000
+ 1157509 words of memory out of 3000000
  39981 multiletter control sequences out of 15000+200000
  590571 words of font info for 114 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1584,7 +1584,7 @@ ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (27 pages, 372086 bytes).
+Output written on memoria.pdf (27 pages, 372078 bytes).
 PDF statistics:
  424 PDF objects out of 1000 (max. 8388607)
  115 named destinations out of 1000 (max. 500000)
