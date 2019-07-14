@@ -3,11 +3,11 @@
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{section*.1}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n General}{1}{chapter.8}
 \contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.9}
-\contentsline {section}{\numberline {1.2}IoT (\textit {Internet of Things})}{1}{section.10}
-\contentsline {subsection}{\numberline {1.2.1}Tecnolog\IeC {\'\i }as de comunicaci\IeC {\'o}n}{2}{subsection.11}
-\contentsline {section}{\numberline {1.3}Objetivos y alcance}{4}{section.13}
-\contentsline {subsection}{\numberline {1.3.1}Objetivo}{4}{subsection.14}
-\contentsline {subsection}{\numberline {1.3.2}Alcance}{4}{subsection.15}
+\contentsline {section}{\numberline {1.2}Objetivos y alcance}{1}{section.10}
+\contentsline {subsection}{\numberline {1.2.1}Objetivo}{1}{subsection.11}
+\contentsline {subsection}{\numberline {1.2.2}Alcance}{2}{subsection.12}
+\contentsline {section}{\numberline {1.3}IoT (\textit {internet of things})}{2}{section.13}
+\contentsline {section}{\numberline {1.4}Tecnolog\IeC {\'\i }as de comunicaci\IeC {\'o}n}{2}{section.14}
 \contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n Espec\IeC {\'\i }fica}{5}{chapter.16}
 \contentsline {section}{\numberline {2.1}Estructura general del sistema}{5}{section.17}
 \contentsline {section}{\numberline {2.2}Requerimientos}{6}{section.19}

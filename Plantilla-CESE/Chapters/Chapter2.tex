@@ -55,13 +55,13 @@ Los siguientes son los requerimientos del presente trabajo:
 
 	%\item Nivel de protección debe ser IP65.
 
-	\item Autonomía de la batería debe ser de 1 días.
+	\item Autonomía de la batería debe ser de 1 día.
 
 	\item Módulo Sigfox.
 
 		\begin{itemize}
 
-			\item Debe tener un módulo Dual Zone con comunicación por UART.
+			\item Debe tener un módulo \textit{Dual Zone} con comunicación por UART.
 
 			\item Debe tener antena externa con centro de banda en 915 MHz.
 
@@ -95,8 +95,6 @@ Los siguientes son los requerimientos del presente trabajo:
 
 		\item Debe colocarse en modo de bajo consumo mientras no esté en uso.
 
-		\item Transmisiones Uplink al backend de sigfox máximo 50 mensajes por día.
-
 		\item Verificación de cada respuesta de comando AT enviado desde el MCU al módulo SIgFox.
 
 	\end{enumerate}
@@ -125,16 +123,160 @@ Los siguientes son los requerimientos del presente trabajo:
 
 	\item El sistema deberá verificar las entradas analógicas cada 1 minuto (parámetro configurable).
 
-	\item El sistema saldrá del modo de bajo consumo cada vez que ocurra una interrupción externa.
+	\item El sistema saldrá del modo de bajo consumo cada vez que ocurra una interrupción por tiempo.
 
 \end{enumerate}
 
 
-
+%https://www.sigfox.com/en/sigfox-iot-radio-technology
 \subsection{Sigfox}
-Contexto y explicación  completo de que es Sigfox...
-Contexto y explicación  completo de que es Sigfox...
-Contexto y explicación  completo de que es Sigfox...
+Fundada en Francia en 2010 con el fin de construir una red global que se dedicara al Internet de las cosas y operara con un costo muy bajo y un consumo mínimo de energía. La tecnología Sigfox se basa en una comunicación por radio de largo alcance, dedicada por completo a hacer que cualquier objeto se comunique con muy bajo consumo de energía, extrayendo y transportando mensajes muy pequeños.
+
+%https://build.sigfox.com/sigfox#coverage
+El protocolo Sigfox se centra en: 
+\begin{itemize}
+    \item La autonomía: Consumo de energía extremadamente bajo, lo que permite años de duración de la batería.
+    \item Simplicidad:  Sin configuración, solicitud de conexión o señalización. ¡El dispositivo está en funcionamiento en minutos!
+    \item Eficiencia de precio: Desde el hardware utilizado en los dispositivos hasta la red, optimiza cada paso para que sea lo más rentable posible.
+    \item Pequeños mensajes: No permiten activos o medios grandes en la red, solo notificaciones pequeñas: hasta 12 bytes ascendentes y 8 bytes descendentes.
+    \item Complementariedad: Gracias al bajo costo y facilidad de configuración, también se puede usar Sigfox como una solución secundaria para cualquier otro tipo de red, como: WiFi, Bluetooth, GPRS, etc.
+\end{itemize}
+
+Como se puede observar en la figura \ref{fig:SigfoxOverview} El ciclo de vida de un mensaje de Sigfox es siguiente:
+\begin{enumerate}
+    \item Un dispositivo se despierta y emite un mensaje usando su antena de radio,
+    \item Múltiples estaciones base de Sigfox en el área reciben el mensaje,
+    \item Las estaciones base envían el mensaje a la nube de Sigfox,
+    \item La nube de Sigfox envía el mensaje a la plataforma de el cliente.
+\end{enumerate}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.25]{./Figures/SigfoxOverview.jpg}
+	\caption{Ciclo de vida de un mensaje en Sigfox.}
+	\label{fig:SigfoxOverview}
+\end{figure}
+
+
+Sigfox utiliza la tecnología de radio UNB y opera en las bandas sin licencia ISM (\textit{ industrial, scientific and medical}) para intercambiar mensajes de radio a través del aire en las frecuencias 868 MHz y 902-928 MHz. En cada pais, las  bandas ISM están bajo el control de las regulaciones locales, que definen restricciones técnicas para el uso del espectro, Sigfox tiene definidas configuraciones de radio que cumplan con las regulaciones locales.
+
+%La modulación por desplazamiento de fase o PSK (Phase Shift Keying) es una forma de modulación angular que consiste en hacer variar la fase de la portadora entre un número determinado de valores discretos. La diferencia con la modulación de fase convencional (PM) es que mientras en ésta la variación de fase es continua, en función de la señal moduladora, en la PSK la señal moduladora es una señal digital y, por tanto, con un número de estados limitado.%
+
+%https://www.link-labs.com/blog/sigfox-vs-lora
+Sigfox combina UNB con modulación  DBPSK (\textit{differential binary phase shift keying}), este un método de transmisión de radio estándar que toma fragmentos de espectro muy estrechos y cambia la fase de la onda de radio portadora para codificar los datos. Esto permite que el receptor solo escuche en una pequeña porción de espectro, lo que mitiga el efecto del ruido. cada mensaje tiene un ancho de 100 Hz y se transfiere a una velocidad de 100 o 600 bits por segundos, dependiendo de la región. %https://build.sigfox.com/sigfox-device-radio-specifications
+
+Tiene una funcionalidad bidireccional, pero la capacidad para ir desde la estación base hasta el dispositivo final está restringida, y tendrá menos presupuesto de enlaces que hacia abajo. Esto se debe a que la sensibilidad del receptor en el dispositivo final no es tan buena como en la estación base.
+
+%https://build.sigfox.com/sigfox-radio-configurations-rc
+Sigfox tiene una red de cobertura global, que opera en la banda ISM en todo el mundo, las operaciones globales se dividen actualmente en seis  zonas geográficas, cada zona tiene un conjunto diferente de parámetros que acotan claramente la implementación del hardware del dispositivo, principalmente rango de frecuencia y potencia máxima irradiada. En la tabla \ref{tab:ZonasSigfox} se puede observar algunos de estos parámetros.
+
+\begin{table}[h]
+	\centering
+	\caption[Zonas de frecuencia]{Frecuencias según zonas}
+	\begin{tabular}{l c c c c c c}    
+		\toprule
+		\textbf{ } 	   & \textbf{RC1} & \textbf{RC2} 	& \textbf{RC3}  & \textbf{RC4}   & \textbf{RC5}	& \textbf{RC6} \\
+		\midrule
+		Frecuencia central \textit{uplink} ( MHz)	    & 868.130 	& 902.200	&923.200  &920.800	&923.300 &865.200\\	
+		Frecuencia central \textit{downlink} ( MHz) 	& 869.525	& 905.200   &922.200 &922.300	&922.300	&866.300\\
+		Velocidad de datos \textit{uplink} ( bits/s)	& 100       &600        &100     &600       &100        &100\\	
+		Velocidad de datos \textit{downlink} ( bits/s)	& 600       & 600    	&600     & 600       & 600    	&600\\
+		EIRP (dBm)		                             	 & 16       & 24		&16     &24	        &14         &16\\
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:ZonasSigfox}
+\end{table}
+
+Las 6 zonas  actuales con la configuración de radio de Sigfox son:
+\begin{itemize}
+    \item RC1:
+        \begin{itemize}
+            \item Europa: Bélgica, Croacia, República Checa, Dinamarca, Estonia, Finlandia, Francia, Alemania, Hungría, Irlanda, Italia, Luxemburgo, Malta, Países Bajos, Noruega, Polonia, Portugal, Eslovaquia, España, Suecia, Suiza, Reino Unido.
+            \item Francia de ultramar: Guayana Francesa, Polinesia Francesa, Guadalupe, Martinica, Mauricio, Mayotte, Nueva Caledonia, Reunión.
+            \item Oriente Medio y África: Irán, Kenia, Omán, Sudáfrica, Túnez, Emiratos Árabes Unidos.
+        \end{itemize}
+    \item RC2:
+        \begin{itemize}
+            \item Brasil, Canadá, México, Puerto Rico, Estados Unidos.
+        \end{itemize}
+    \item RC3:
+        \begin{itemize}
+            \item Japón
+        \end{itemize}
+    \item RC4:
+        \begin{itemize}
+            \item América Latina: Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, Panamá, Perú, Uruguay.
+            \item Asia Pacífico: Australia, Hong Kong, Malasia, Nueva Zelanda, Singapur, Taiwán, Tailandia.
+        \end{itemize}
+    \item RC5:
+        \begin{itemize}
+            \item Corea del Sur
+        \end{itemize}
+    \item RC6:
+        \begin{itemize}
+            \item India
+        \end{itemize}
+\end{itemize}
+
+En la figura \ref{fig:coverageSigfox} se puede observar el mapa de cobertura de Sigfox.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.65]{./Figures/coverageSigfox.PNG}
+	\caption{Disponibilidad geográfica de Sigfox}
+	\label{fig:coverageSigfox}
+\end{figure}
+
+%https://build.sigfox.com/certification
+La Certificación Sigfox es el reconocimiento de la conformidad de un dispositivo con las especificaciones de certificación Sigfox para garantizar la compatibilidad con los servicios Sigfox y el rendimiento nominal en la red. La certificación Sigfox \textit{Ready} es obligatoria para que cualquier dispositivo esté conectado a la red Sigfox, con la excepción de las soluciones de desarrollo ( prototipos).
+
+Sigfox requiere la certificación para los dispositivos que desean comunicarse en la red Sigfox. Esto es para garantizar la interoperabilidad y la prestación de servicios a un nivel de rendimiento nominal. Al finalizar el proceso de certificación, Sigfox otorga un certificado al cliente. Este certificado es necesario para registrar cualquier dispositivo del mismo modelo en la red Sigfox.
+
+La certificación Sigfox \textit{Ready} se clasifica en clases, en la  siguiente tabla \ref{tab:Tecno} se observan las características.
+%https://storage.sbg1.cloud.ovh.net/v1/AUTH_669d7dfced0b44518cb186841d7cbd75/dev_medias/build/40599x1josfx0hz/Sigfox%20device%20cookbook%20-%20communication%20configuration%20Nov%202018.pdf
+\begin{table}[h]
+	\centering
+	\caption[Sigfox \textit{Ready}]{Caracteristicas de certificación (\textit{Sigfox Device Class}) }
+	\begin{tabular}{l c c c}    
+		\toprule
+		\textbf{  } & \multicolumn{3}{c}{\textit{Device EIRP}} \\ \cline{2-4} 
+		\textbf{ \textit{Device Class} } & \textbf{RC1, RC3} & \textbf{RC2,RC4} 	& \textbf{RC5} \\
+		\midrule
+		0u	    &$\ge12$ dBm 	&$\ge20$ dBm & $\ge10$ dBm \\	
+		1u	&$\ge7$ and <12 dBm &$\ge15$ and <20 dBm & $\ge5$ and <10 dBm\\
+		2u	&$\ge2$ and <7 dBm & $\ge10$ and <15 dBm & $\ge0$ and <5 dBm \\	
+		3u	&< 2 dBm &< 10 dBm &< 0 dBm   \\
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:ZonasSigfox}
+\end{table}
+%https://storage.sbg1.cloud.ovh.net/v1/AUTH_669d7dfced0b44518cb186841d7cbd75/dev_medias/build/40599x1josfx0hz/Sigfox%20device%20cookbook%20-%20communication%20configuration%20Nov%202018.pdf
+
+La figura \ref{fig:certificacion} muestra la prioridad de las clases, siendo clase 0u la de mayor potencia de transmisión.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.65]{./Figures/certificacion.PNG}
+	\caption{Potencia según clases.}
+	\label{fig:certificacion}
+\end{figure}
+
+%https://www.sigfox.com/en/coverage 
+Sigfox se basa en una infraestructura privada de antenas y servidores, la red es desplegada por un operador local, En América es la empresa WND \textit{group } (\textit{Wireless Network Development}) , la cual se encuentra en Colombia, Argentina, Brasil, Chile, Costa Rica, Ecuador, El Salvador, Mexico, Panamá y United Kingdom.Tambien existen los canales que son los encargados de consumir y ofrecer el servicio que brinda WND. 
+%https://build.sigfox.com/backend-callbacks-and-api
+
+La información se maneja en un servidor Sigfox  \textit{back-end} donde el usuario tiene la posibilidad darle un tratamiento a la información a través de una interfaz API (\textit{Application Programming Interface}). En la plataforma de Sigfox, una empresa suele estar representada por un "Grupo", que contiene "Tipo de dispositivo". Cada tipo de dispositivo puede atribuirse a una "familia" de dispositivos como se observa en la figura \ref{fig:backendSigfox}. Todas las unidades del mismo producto se agruparán como un tipo de dispositivo para permitir que todas se comporten exactamente de la misma manera cuando la red Sigfox recibe un mensaje. 
+%https://build.sigfox.com/backend-callbacks-and-api
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.35]{./Figures/backendSigfox.jpg}
+	\caption{Diagrama Sigfox \textit{back-end}}
+	\label{fig:backendSigfox}
+\end{figure}
+
+Sigfox basa su modelo de negocio en conectividad, ofrece servicios de comunicación seguros, bidireccionales y listos para usar, para conectar los dispositivos a la nube. Existen planes de conectividad anuales que difieren en la cantidad de mensajes que pueden transmitir al día, máximo 140 \textit{uplink} y 4 \textit{downlink}.
+
 \subsection{Lora}
 Contexto y explicacióncompleto de que es Lora...
 
@@ -190,7 +332,7 @@ Es importante tener presente que en el caso de las ecuaciones estas pueden ser r
 
 \begin{equation}
 	\label{eq:schrodinger}
-	\frac{\hbar^2}{2m}\nabla^2\Psi + V(\mathbf{r})\Psi = -i\hbar \frac{\partial\Psi}{\partial t}
+	\frac{\hbar^2}{2m}\nabla^2\Psi + V(\mathbf{r})\Psi = -i\hbar \frac{\partial\Psi}{\partial t} \geq
 \end{equation}
 
 Para las ecuaciones se debe utilizar un tamaño de letra equivalente al utilizado para el texto del trabajo, en tipografía cursiva y preferentemente del tipo Times New Roman o similar. El espaciado antes y después de cada ecuación es de aproximadamente el doble que entre párrafos consecutivos del cuerpo principal del texto. Por suerte la plantilla se encarga de esto por nosotros.
@@ -211,7 +353,7 @@ Y para la ecuación \ref{eq:schrodinger}:
 \begin{verbatim}
 \begin{equation}
 	\label{eq:schrodinger}
-	\frac{\hbar^2}{2m}\nabla^2\Psi + V(\mathbf{r})\Psi = 
+	\frac{\hbar^2}{2m}\nabla^2\Psi + V(\mathbf{r})\Psi =
 	-i\hbar \frac{\partial\Psi}{\partial t}
 \end{equation}
 
