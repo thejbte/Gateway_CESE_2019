@@ -153,9 +153,11 @@ Como se puede observar en la figura \ref{fig:SigfoxOverview} El ciclo de vida de
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.25]{./Figures/SigfoxOverview.jpg}
-	\caption{Ciclo de vida de un mensaje en Sigfox.}
+	\caption{Ciclo de vida de un mensaje en Sigfox\protect\footnotemark.}
 	\label{fig:SigfoxOverview}
 \end{figure}
+
+\footnotetext{\url{https://build.sigfox.com/sigfox}}
 
 
 Sigfox utiliza la tecnología de radio UNB y opera en las bandas sin licencia ISM (\textit{ industrial, scientific and medical}) para intercambiar mensajes de radio a través del aire en las frecuencias 868 MHz y 902-928 MHz. En cada pais, las  bandas ISM están bajo el control de las regulaciones locales, que definen restricciones técnicas para el uso del espectro, Sigfox tiene definidas configuraciones de radio que cumplan con las regulaciones locales.
@@ -171,6 +173,7 @@ Tiene una funcionalidad bidireccional, pero la capacidad para ir desde la estaci
 Sigfox tiene una red de cobertura global, que opera en la banda ISM en todo el mundo, las operaciones globales se dividen actualmente en seis  zonas geográficas, cada zona tiene un conjunto diferente de parámetros que acotan claramente la implementación del hardware del dispositivo, principalmente rango de frecuencia y potencia máxima irradiada. En la tabla \ref{tab:ZonasSigfox} se puede observar algunos de estos parámetros \cite{RConfg}.
 
 \begin{table}[h]
+    \small
 	\centering
 	\caption[Zonas de frecuencia]{Frecuencias según zonas}
 	\begin{tabular}{l c c c c c c}    
@@ -196,27 +199,16 @@ Las 6 zonas  actuales con la configuración de radio de Sigfox son:
             \item Francia de ultramar: Guayana Francesa, Polinesia Francesa, Guadalupe, Martinica, Mauricio, Mayotte, Nueva Caledonia, Reunión.
             \item Oriente Medio y África: Irán, Kenia, Omán, Sudáfrica, Túnez, Emiratos Árabes Unidos.
         \end{itemize}
-    \item RC2:
-        \begin{itemize}
-            \item Brasil, Canadá, México, Puerto Rico, Estados Unidos.
-        \end{itemize}
-    \item RC3:
-        \begin{itemize}
-            \item Japón
-        \end{itemize}
+    \item RC2: Brasil, Canadá, México, Puerto Rico, Estados Unidos.
+    \item RC3: Japón
     \item RC4:
         \begin{itemize}
             \item América Latina: Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, Panamá, Perú, Uruguay.
             \item Asia Pacífico: Australia, Hong Kong, Malasia, Nueva Zelanda, Singapur, Taiwán, Tailandia.
         \end{itemize}
-    \item RC5:
-        \begin{itemize}
-            \item Corea del Sur
-        \end{itemize}
-    \item RC6:
-        \begin{itemize}
-            \item India
-        \end{itemize}
+    \item RC5: Corea del Sur
+    \item RC6: India
+
 \end{itemize}
 
 En la figura \ref{fig:coverageSigfox} se puede observar el mapa de cobertura de Sigfox.
@@ -291,10 +283,10 @@ LoRa esta basada en dos capas distintas, como se puede observar en la figura \re
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.55]{./Figures/LoraWanClasses.PNG}
-	\caption{LoraWan Stack\protect\footnotemark.}
+	\caption{LoraWan Stack\cite{LoRaAlliance2015}.}
 	\label{fig:LoraStack}
 \end{figure}
-\footnotetext{\url{https://www.tuv.com/media/corporate/products_1/electronic_components_and_lasers/TUeV_Rheinland_Overview_LoRa_and_LoRaWANtmp.pdf}}
+
 %En las comunicaciones digitales, el espectro de propagación de chirrido ( CSS ) es una técnica de espectro ensanchado que utiliza pulsos de chirrido modulados en %frecuencia de banda ancha para codificar información. [1] Un chirrido es una señal sinusoidal de aumento o disminución de la frecuencia con el tiempo (a menudo con %una expresión polinomial para la relación entre el tiempo y la frecuencia). En la imagen se muestra un ejemplo de un cambio de tendencia en el que la frecuencia %aumenta linealmente con el tiempo. A veces, la frecuencia de los upchirps aumenta exponencialmente con el tiempo.
 %Al igual que con otros métodos de espectro ensanchado, el espectro de chirrido utiliza todo su ancho de banda asignado para transmitir una señal, lo que lo hace %robusto al ruido del canal. Además, debido a que los chirridos utilizan una amplia banda del espectro, el espectro extendido de los chirridos también es resistente %al desvanecimiento de múltiples vías, incluso cuando se opera a una potencia muy baja. Sin embargo, es diferente del espectro extendido de secuencia directa (DSSS) %o del espectro expandido de salto de frecuencia (FHSS), ya que no agrega ningún elemento pseudoaleatorio a la señal para ayudar a distinguirlo del ruido en el %canal, sino que se basa en el Naturaleza lineal del pulso chirrido. Además, el espectro del chirrido es resistente al efecto Doppler., lo que es típico en %aplicaciones de radio móvil. [2]
 
@@ -312,14 +304,14 @@ La arquitectura red es una topología estrella de largo alcance (\textit{star-of
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.70]{./Figures/Loraarquitecturenetwork.PNG}
-	\caption{LoRa arquitectura de red\protect\footnotemark.}
+	\includegraphics[scale=.65]{./Figures/Loraarquitecturenetwork.PNG}
+	\caption{LoRa arquitectura de red\cite{LoRaAlliance2015}.}
 	\label{fig:Loraarquitecturenetwork}
 \end{figure}
-\footnotetext{\url{https://www.tuv.com/media/corporate/products_1/electronic_components_and_lasers/TUeV_Rheinland_Overview_LoRa_and_LoRaWANtmp.pdf}}
 
-La comunicación entre los nodos generalmente es bidireccional, la puerta de enlace se distrbuye en diferentes frecuencias, canales y tarifas de datos. Las tasas de datos de LoRa varían de 0.3 Kbps a 50Kbps, Para  maximizar la duración de batería de los dispositivos finales como la capacidad general de la red, la red LoRa gestiona la velocidad de datos y la salida de RF para cada dispositivo final individualmente\protect\footnotemark.
-\footnotetext{\url{https://lora-alliance.org/sites/default/files/2018-05/2015_-_lorawan_specification_1r0_611_1.pdf}}
+
+La comunicación entre los nodos generalmente es bidireccional, la puerta de enlace se distrbuye en diferentes frecuencias, canales y tarifas de datos. Las tasas de datos de LoRa varían de 0.3 Kbps a 50Kbps, Para  maximizar la duración de batería de los dispositivos finales como la capacidad general de la red, la red LoRa gestiona la velocidad de datos y la salida de RF para cada dispositivo final individualmente\cite{Specification2015}.
+
 
 
 Los dispositivos finales pueden transmitir en cualquier canal disponible en cualquier momento, siempre y cuando se respeten las siguientes reglas:
@@ -338,11 +330,10 @@ La red  LoRa distingue entre  tres clases bidireccionales: clase A, clase B, cla
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.65]{./Figures/Loracomparacionclases.PNG}
-	\caption{LoraWan clases\protect\footnotemark.}
+	\includegraphics[scale=.45]{./Figures/Loracomparacionclases.PNG}
+	\caption{LoraWan clases\cite{LoRaAlliance2015}.}
 	\label{fig:Loracomparacionclases}
 \end{figure}
-\footnotetext{\url{https://www.tuv.com/media/corporate/products_1/electronic_components_and_lasers/TUeV_Rheinland_Overview_LoRa_and_LoRaWANtmp.pdf}}
 
 
 \begin{itemize}
@@ -355,29 +346,27 @@ La red  LoRa distingue entre  tres clases bidireccionales: clase A, clase B, cla
 \end{itemize}
 
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 	\includegraphics[scale=.65]{./Figures/LoraclassA.PNG}
-	\caption{Clase A \protect\footnotemark.}
+	\caption{Clase A \cite{Ruano2016}.}
 	\label{fig:LoraclassA}
 \end{figure}
-\footnotetext{\url{https://upcommons.upc.edu/handle/2117/98853}}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.65]{./Figures/LoraClaseB.PNG}
-	\caption{Clase B \protect\footnotemark.}
+	\includegraphics[scale=.75]{./Figures/LoraClaseB.PNG}
+	\caption{Clase B \cite{Ruano2016}.}
 	\label{fig:LoraClaseB}
 \end{figure}
-\footnotetext{\url{https://upcommons.upc.edu/handle/2117/98853}}
+
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.65]{./Figures/LoraClaseC.PNG}
-	\caption{Clase C \protect\footnotemark.}
+	\caption{Clase C \cite{Ruano2016}.}
 	\label{fig:LoraClaseC}
 \end{figure}
-\footnotetext{\url{https://upcommons.upc.edu/handle/2117/98853}}
 
 
 %-----------------------------

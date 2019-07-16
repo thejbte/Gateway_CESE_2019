@@ -51,7 +51,7 @@ En la figura \ref{fig:Hierarchy} se puede observar la jerarquia del diagrama esq
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.6]{./Figures/Hierarchy.jpg}
+	\includegraphics[scale=.55]{./Figures/Hierarchy.jpg}
 	\caption{Jerarquia del hardware.}
 	\label{fig:Hierarchy}
 \end{figure}
@@ -61,6 +61,7 @@ En la figura \ref{fig:Hierarchy} se puede observar la jerarquia del diagrama esq
 \begin{itemize}
     \item \textit{Ultra low power} ARM Cortex\textregistered-M4  CPU with FPU
     \item  SRAM 256 KB
+    \item  Flash 1M
     \item 30 nA \textit{Shutdown mode (5 wakeup pins)}
     \item 120 nA \textit{Standby mode (5 wakeup pins)}
     \item 420 nA \textit{Standby mode with RTC}
@@ -91,7 +92,7 @@ En la figura \ref{fig:SIGFOX_SCH} se observa el diagrama esquemático del hardwa
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.45]{./Figures/SIGFOX_SCH.PNG}
+	\includegraphics[scale=.4]{./Figures/SIGFOX_SCH.PNG}
 	\caption{Esquemático módulo Sigfox.}
 	\label{fig:SIGFOX_SCH}
 \end{figure}
@@ -116,6 +117,8 @@ En la figura \ref{fig:lORA_SCH} se observa el diagrama esquemático del hardware
 	\label{fig:lORA_SCH}
 \end{figure}
 
+Como el dispositivo esta enfocado al IoT, se garantizo desde la etapa de diseño que los módulos de las dos tecnologías consumieran lo mínimo posible en modo de bajo consumo, por lo que se implemento interruptores con transistores MOSFET (\textit{Metal-oxide-semiconductor Field-effect transistor})en la alimentación principal de cada integrado.
+
 \subsubsection{Entradas analógicas}
 
 En la figura \ref{fig:inputanalog} se puede observar el diagrama esquemático de las entradas analógicas, los valores de las resistencias se escogieron de acuerdo a los niveles de tensión y de corriente de las entradas( 0-5VDC, 0-10VDC, 4-20mA) y el máximo voltaje permitido por el microcontrolador 3.3V. Todas las entradas analógicas tiene amplificadores en modo seguidor para acoplar impedancias y diodos TVS a la salida para garantizar los niveles de tensión máximo (3.3VDC).
@@ -129,7 +132,7 @@ En la figura \ref{fig:inputanalog} se puede observar el diagrama esquemático de
 
 \subsubsection{Entradas digitales}
 
-En la figura \ref{fig:digitalinputs} se puede observar el diagrama esquemático de las entradas digitales, estas se encuentran optocopladas, aisladas y funcionan con niveles de voltaje entre 3.3VDC a 24VDC.
+En la figura \ref{fig:digitalinputs} se puede observar el diagrama esquemático de las entradas digitales, estas se encuentran opto-aisladas y funcionan con niveles de voltaje entre 3.3VDC a 24VDC.
 
 \begin{figure}[h]
 	\centering
@@ -186,14 +189,10 @@ En la figura \ref{fig:digitalinputs} se puede observar el diagrama esquemático 
 %
 %--------------
 
-
-
-
-\subsection{Selección de tecnologías a usar.}
-
+Antena :
 \subsection{Sintonización y verificación de la antena.}
 
-\subsection{Desarrollo de la capa de manejadores de dispsitivos(\textit{driver}).}
+\subsection{Desarrollo de la capa de manejadores de dispositivos(\textit{driver}).}
 
 \subsection{Diseño del firmware}
 

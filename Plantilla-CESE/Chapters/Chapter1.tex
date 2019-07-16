@@ -20,6 +20,8 @@ En este capítulo se menciona la problemática que motivó la realización del p
 %\section{Introducción}
 
 %----------------------------------------------------------------------------------------
+
+%http://jderobot.org/store/juancamilo/uploads/tesismaster.pdf
 \section{Motivación}
 En el transcurso de la próxima década se espera un gran crecimiento en la cantidad de dispositivos IoT (\textit{internet of things}) provenientes de redes LPWAN (\textit{Low-Power Wide Area Network}). Para el 2025, se espera que más de 100 billones de dispositivos se conecten a través de LPWAN\cite{taylor2015world}. Las principales tecnologías, que prometen una vida útil alta de la batería de los dispositivos y un alcance de hasta 15 kilómetros, son Sigfox, Lora y NB-IoT, que actualmente están conectados en todo el mundo con más de 25 millones de dispositivos, brindando servicio y facilitando las experiencias del usuario\citep{iotanalytics}.
 
@@ -53,6 +55,7 @@ Las principales características de una red de comunicación IoT son:
 En la tabla \ref{tab:Tecno} se puede observar una comparación de las principales tecnologías de comunicación.
 
 \begin{table}[h]
+%\small
 	\centering
 	\caption[Redes de comunicación]{Redes de comunicación más utilizadas para proyectos IoT}
 	\begin{tabular}{l c c c}    
@@ -100,17 +103,37 @@ Tecnología de acceso por radio que proporciona cobertura extendida, alta capaci
 NB-IoT requiere un ancho de banda mínimo de 180 kHz, que es igual al tamaño del LTE físico más pequeño.
 Dependiendo de la disponibilidad del espectro, esta tecnología se puede implementar por sí solo en los portadores de guardia de LTE / UMTS existentes\citep{adhikary2016performance}.
 
-\textbf{Tecnología LTE-M:}
-
-Es un tipo de tecnología de radio de red LPWAN que permite una amplia gama de dispositivos celulares y servicios (específicamente, para aplicaciones de máquina a máquina e IoT). Utiliza la ya existente red móvil para conectar dispositivos de manera masiva.
+Permite transmisiones de hasta 1600 bytes sin limitación de cantidad mensajes por día, con un alcance de 1km en zonas urbanas y 10 km en zonas rurales\cite{MEKKI20191}.
 
 \textbf{Tecnología SigFox:} 
 
-Es una tecnología de comunicación UNB (\textit{Ultra-Narrow Band}) para conectar sensores y dispositivos. Opera en las bandas 868 MHz y 902-928 MHz.
+Es una tecnología de comunicación UNB (\textit{Ultra-Narrow Band}) para conectar sensores y dispositivos. Opera en las bandas 868 MHz y 902-928 MHz, permite la transmisión de datos hasta 12 bytes con limitación de 140 mensajes de subida y 4 mensajes de bajada, esta tecnología tiene un alcance de hasta 10 km en zonas urbanas y 40 km en zonas rurales\cite{MEKKI20191}.
 
 \textbf{Tecnología LoRa:} 
 
-Es una tecnología LPWAN de modulación de radio de CCS (\textit{chirp spread spectrum}). Esta permite el envió y recepción de información en las bandas de frecuencia 433 MHz, 868 MHZ y 915 MHz .
+Es una tecnología LPWAN de modulación de radio de CCS (\textit{chirp spread spectrum}). Esta permite el envió y recepción de información en las bandas de frecuencia 433 MHz, 868 MHZ y 915 MHz, permite la transmisión de hasta 243 bytes sin limitación de cantidad de mensajes por día y tiene un alcance de 5km en zonas urbanas y 20 km en zonas rurales\cite{MEKKI20191}.
+
+En la tabla \ref{tab:Comparacion1Tabla} se puede observar las comparaciones de costos de las principales tecnologías LPWAN para el IoT : Sigfox, NB-IoT y LoRaWAN. En ella se muestra una ventaja en relación a costos comparado con NB-IoT\cite{mekki2018overview}.
+
+\begin{table}[h]
+    \small
+	\centering
+	\caption[Comparación costos.]{Comparación costos de tecnologías LPWAN para el IoT.}
+	\begin{tabular}{l c c c}    
+		\toprule
+		\textbf{ } 	   & \textbf{Spectrum cost} & \textbf{Deployment cost} 	& \textbf{End-device cost}\\
+		\midrule
+		Sigfox 	    &Free &>4000 euro/base station &<2 euros\\	
+ 		LoRaWAN 	&Free  &>100 euros/gateway y >1000 euros/base station &3-5 euros\\
+        NB-IoT      &>500 M euro /MHz &>15000 euro/base station &>20 euros\\
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:Comparacion1Tabla}
+\end{table}
+
+Las tecnologías seleccionadas fueron Sigfox y LoRaWAN, para la selección de estas tecnologías se tuvo en cuenta algunas características tales como : LPWAN con largo alcance\cite{Samie:2016:ITE:2968456.2974004} y bajo costo\cite{mekki2018overview}. En el capitulo \ref{Chapter2} se explicaran en detalle estas tecnologías .
+
 
 %---------------Objetivos y alcance 
 \section{Objetivos y alcance}
