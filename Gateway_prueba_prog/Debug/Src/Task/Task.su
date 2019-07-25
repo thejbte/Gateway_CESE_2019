@@ -1,0 +1,4 @@
+Task.c:12:6:Leds_Callback	16	static
+Task.c:17:6:IdleTask_Callback	16	static
+Task.c:23:6:UplinkDispatcher_Callback	24	static
+Task.c:54:6:WisolService_Callback	24	static
