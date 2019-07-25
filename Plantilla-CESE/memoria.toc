@@ -1,31 +1,34 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{section*.1}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n General}{1}{chapter.8}
-\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.9}
-\contentsline {section}{\numberline {1.2}Objetivos y alcance}{1}{section.10}
-\contentsline {subsection}{\numberline {1.2.1}Objetivo}{1}{subsection.11}
-\contentsline {subsection}{\numberline {1.2.2}Alcance}{2}{subsection.12}
-\contentsline {section}{\numberline {1.3}IoT (\textit {internet of things})}{2}{section.13}
-\contentsline {section}{\numberline {1.4}Tecnolog\IeC {\'\i }as de comunicaci\IeC {\'o}n}{2}{section.14}
-\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n Espec\IeC {\'\i }fica}{5}{chapter.16}
-\contentsline {section}{\numberline {2.1}Estructura general del sistema}{5}{section.17}
-\contentsline {section}{\numberline {2.2}Requerimientos}{6}{section.19}
-\contentsline {subsection}{\numberline {2.2.1}Sigfox}{7}{subsection.36}
-\contentsline {subsection}{\numberline {2.2.2}Lora}{7}{subsection.37}
-\contentsline {subsection}{\numberline {2.2.3}Figuras}{7}{subsection.38}
-\contentsline {subsection}{\numberline {2.2.4}Ecuaciones}{8}{subsection.43}
-\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{9}{chapter.46}
-\contentsline {section}{\numberline {3.1}Modulos del sistema de hardware}{9}{section.47}
-\contentsline {subsection}{\numberline {3.1.1}Selecci\IeC {\'o}n de tecnolog\IeC {\'\i }as a usar.}{10}{subsection.77}
-\contentsline {subsection}{\numberline {3.1.2}Sintonizaci\IeC {\'o}n y verificaci\IeC {\'o}n de la antena.}{10}{subsection.78}
-\contentsline {subsection}{\numberline {3.1.3}Desarrollo de la capa de manejadores de dispsitivos(\textit {driver}).}{10}{subsection.79}
-\contentsline {subsection}{\numberline {3.1.4}Dise\IeC {\~n}o del firmware}{10}{subsection.80}
-\contentsline {subsection}{\numberline {3.1.5}Implementaci\IeC {\'o}n del firmware y herramientas a usar.}{10}{subsection.81}
-\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{11}{chapter.82}
-\contentsline {section}{\numberline {4.1}Pruebas unitarias de manejadores de dispositivos (\textit {driver})}{11}{section.83}
-\contentsline {section}{\numberline {4.2}Pruebas funcionales sobre el prototipo.}{11}{section.84}
-\contentsline {section}{\numberline {4.3}Pruebas de integraci\IeC {\'o}n.}{11}{section.85}
-\contentsline {chapter}{\numberline {5}Conclusiones}{13}{chapter.86}
-\contentsline {section}{\numberline {5.1}Conclusiones generales dle trabajo realizado.}{13}{section.87}
-\contentsline {section}{\numberline {5.2}Trabajo futuro.}{13}{section.88}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n General}{1}{chapter.10}
+\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.11}
+\contentsline {section}{\numberline {1.2}IoT (\textit {Internet of Things})}{1}{section.12}
+\contentsline {subsection}{\numberline {1.2.1}Tecnolog\IeC {\'\i }as de comunicaci\IeC {\'o}n}{2}{subsection.13}
+\contentsline {section}{\numberline {1.3}Objetivos y alcance}{4}{section.16}
+\contentsline {subsection}{\numberline {1.3.1}Objetivo}{4}{subsection.17}
+\contentsline {subsection}{\numberline {1.3.2}Alcance}{4}{subsection.18}
+\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n Espec\IeC {\'\i }fica}{7}{chapter.19}
+\contentsline {section}{\numberline {2.1}Estructura general del sistema}{7}{section.20}
+\contentsline {section}{\numberline {2.2}Requerimientos}{8}{section.22}
+\contentsline {subsection}{\numberline {2.2.1}Sigfox}{9}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.2}LoRa}{13}{subsection.55}
+\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o e Implementaci\IeC {\'o}n}{17}{chapter.64}
+\contentsline {section}{\numberline {3.1}M\IeC {\'o}dulos del sistema de hardware}{17}{section.65}
+\contentsline {subsection}{\numberline {3.1.1}Hardware}{17}{subsection.66}
+\contentsline {subsubsection}{Microcontrolador:}{18}{section*.68}
+\contentsline {subsubsection}{Modulo Sigfox}{18}{section*.69}
+\contentsline {subsubsection}{Modulo Lora}{18}{section*.72}
+\contentsline {subsubsection}{Entradas anal\IeC {\'o}gicas}{20}{section*.75}
+\contentsline {subsubsection}{Entradas digitales}{20}{section*.77}
+\contentsline {subsection}{\numberline {3.1.2}Sintonizaci\IeC {\'o}n y verificaci\IeC {\'o}n de la antena.}{21}{subsection.79}
+\contentsline {subsection}{\numberline {3.1.3}Desarrollo de la capa de manejadores de dispositivos(\textit {driver}).}{21}{subsection.80}
+\contentsline {subsection}{\numberline {3.1.4}Dise\IeC {\~n}o del firmware}{21}{subsection.81}
+\contentsline {subsection}{\numberline {3.1.5}Implementaci\IeC {\'o}n del firmware y herramientas a usar.}{21}{subsection.82}
+\contentsline {chapter}{\numberline {4}Ensayos y Resultados}{23}{chapter.83}
+\contentsline {section}{\numberline {4.1}Pruebas unitarias de manejadores de dispositivos (\textit {driver})}{23}{section.84}
+\contentsline {section}{\numberline {4.2}Pruebas funcionales sobre el prototipo.}{23}{section.85}
+\contentsline {section}{\numberline {4.3}Pruebas de integraci\IeC {\'o}n.}{23}{section.86}
+\contentsline {chapter}{\numberline {5}Conclusiones}{25}{chapter.87}
+\contentsline {section}{\numberline {5.1}Conclusiones generales dle trabajo realizado.}{25}{section.88}
+\contentsline {section}{\numberline {5.2}Trabajo futuro.}{25}{section.89}

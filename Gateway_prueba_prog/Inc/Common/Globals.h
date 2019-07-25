@@ -34,6 +34,7 @@
 
 #define WAIT WSSFM1XRX_Wait_NonBlock
 
+
 /*Definition */
 //#define Once_Bytes
 #define Doce_Bytes
@@ -98,6 +99,8 @@
 
 /** *UASRT2  */
 #define UART_DEBUG PutCharWrapperUart_2
+
+extern volatile qRespHandler_t ResponseObject;
 
 void PrintStringVar(UART_HandleTypeDef *huart,uint8_t *String, uint16_t  Variable);
 void PrintString(UART_HandleTypeDef *huart,uint8_t *pData);
@@ -191,6 +194,7 @@ uint8_t Ready;
 uint8_t Downlink;
 }UART_BufferData_t;
 extern UART_BufferData_t UART_RX;
+extern UART_BufferData_t UART_RX3;
 
 void RSTCtrl_Sigfox(uint8_t sValue);
 void RST2Ctrl_Sigfox(uint8_t sValue);

@@ -44,8 +44,7 @@
   <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>memoria.aux</file>
-      <file>memoria-blx.bib</file>
+      <file>memoria.bcf</file>
     </provides>
     <requires type="dynamic">
       <file>memoria.bbl</file>
@@ -53,7 +52,6 @@
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
-      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>blx-natbib.def</file>
       <file>standard.bbx</file>
@@ -64,14 +62,13 @@
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="1">
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 2</option>
+      <binary>biber</binary>
       <infile>memoria</infile>
     </cmdline>
     <input>
-      <file>memoria.aux</file>
+      <file>memoria.bcf</file>
     </input>
     <output>
       <file>memoria.bbl</file>
@@ -80,14 +77,10 @@
       <file>memoria.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>memoria.aux</file>
-      <file>memoria-blx.bib</file>
+      <file>memoria.bcf</file>
     </requires>
     <requires type="editable">
       <file>references.bib</file>
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  12 JUL 2019 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.22)  21 JUL 2019 23:04
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -720,18 +720,6 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 at.def"
 File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblatex\blx-bibt
-ex.def"
-File: blx-bibtex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-
-
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
@@ -1008,8 +996,11 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
- (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
-(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
+
+
+LaTeX Warning: Label `tab:ZonasSigfox' multiply defined.
+
+)
 \openout1 = `memoria.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
@@ -1029,8 +1020,7 @@ LaTeX Font Info:    ... okay on input line 125.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
 LaTeX Font Info:    ... okay on input line 125.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 125.
-
-("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
+ ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 LaTeX Info: Redefining \sptext on input line 125.
@@ -1038,7 +1028,7 @@ LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+ ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
 File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1198,10 +1188,7 @@ Package scrlayer Info: Setting magic \footheight to \baselineskip while
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout3 = `memoria-blx.bib'.
+\openout3 = `memoria.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoria.bbl' not found.
@@ -1263,7 +1250,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 125.
 
 1: section
-<./Figures/logoFIUBA.png, id=119, 220.825pt x 220.825pt>
+<./Figures/logoFIUBA.png, id=131, 220.825pt x 220.825pt>
 File: ./Figures/logoFIUBA.png Graphic file (type png)
 <use ./Figures/logoFIUBA.png>
 Package pdftex.def Info: ./Figures/logoFIUBA.png  used on input line 142.
@@ -1347,75 +1334,118 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/sl' in size <14.4> not available
 
 ]
 1: section
-\openout2 = `Chapters/Chapter1.aux'.
-
 (Chapters/Chapter1.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 23.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 25.
 
-LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 24.
+LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 26.
 
 
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 33.
+
+LaTeX Warning: Citation 'iotanalytics' on page 1 undefined on input line 26.
+
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 35.
+
+LaTeX Warning: Citation 'centenaro2016long' on page 1 undefined on input line 3
+6.
+
+
+LaTeX Warning: Citation 'taylor2015world' on page 1 undefined on input line 40.
+
+
 1: section
 [1
 
-
 ]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 67.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 42.
 
 
-LaTeX Warning: Citation 'centenaro2016long' on page 2 undefined on input line 6
-8.
+LaTeX Warning: Citation 'bettstetter1999gsm' on page 2 undefined on input line 
+82.
 
 
-LaTeX Warning: Citation 'taylor2015world' on page 2 undefined on input line 72.
+LaTeX Warning: Citation 'henry2002wifi' on page 2 undefined on input line 86.
 
-
-LaTeX Info: Redefining \sptext on input line 76.
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Info: Redefining \sptext on input line 87.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
 [2]
 
-LaTeX Warning: Citation 'bettstetter1999gsm' on page 3 undefined on input line 
-115.
-
-
-LaTeX Warning: Citation 'henry2002wifi' on page 3 undefined on input line 119.
-
-
 LaTeX Warning: Citation 'chang2014bluetooth' on page 3 undefined on input line 
-123.
-
-LaTeX Info: Redefining \sptext on input line 124.
-LaTeX Info: Redefining \. on input line 124.
-LaTeX Info: Redefining \% on input line 124.
-[3]
-
-LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 128.
+90.
 
 
+LaTeX Warning: Citation 'ramya2011study' on page 3 undefined on input line 95.
 
-LaTeX Warning: Citation 'ramya2011study' on page 4 undefined on input line 130.
 
+LaTeX Warning: Citation 'ramya2011study' on page 3 undefined on input line 97.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 132.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 99.
 
-LaTeX Warning: Citation 'adhikary2016performance' on page 4 undefined on input 
-line 137.
+LaTeX Warning: Citation 'adhikary2016performance' on page 3 undefined on input 
+line 104.
 
-)
-LaTeX Info: Redefining \sptext on input line 238.
-LaTeX Info: Redefining \. on input line 238.
-LaTeX Info: Redefining \% on input line 238.
- [4]
-\openout2 = `Chapters/Chapter2.aux'.
 
- (Chapters/Chapter2.tex
+LaTeX Warning: Citation 'MEKKI20191' on page 3 undefined on input line 106.
+
+
+Overfull \hbox (36.09468pt too wide) in paragraph at lines 106--107
+\T1/ppl/m/n/10.95 por día, con un al-can-ce de 1km en zo-nas ur-ba-nas y 10 km 
+en zo-nas rurales[[]]. 
+ []
+
+
+LaTeX Warning: Citation 'MEKKI20191' on page 3 undefined on input line 110.
+
+
+LaTeX Warning: Citation 'MEKKI20191' on page 3 undefined on input line 114.
+
+LaTeX Info: Redefining \sptext on input line 115.
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+[3]
+
+LaTeX Warning: Citation 'mekki2018overview' on page 4 undefined on input line 1
+16.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 122.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 122.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 124.
+
+Overfull \hbox (77.79419pt too wide) in paragraph at lines 122--133
+ [][] 
+ []
+
+
+LaTeX Warning: Citation 'Samie:2016:ITE:2968456.2974004' on page 4 undefined on
+ input line 135.
+
+
+LaTeX Warning: Citation 'mekki2018overview' on page 4 undefined on input line 1
+35.
+
+
+Overfull \hbox (6.51869pt too wide) in paragraph at lines 135--136
+\T1/ppl/m/n/10.95 lar-go alcance[[]] y ba-jo costo[[]].
+ []
+
+LaTeX Info: Redefining \sptext on input line 164.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+[4]) (Chapters/Chapter2.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [5] [6
+
+]
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 13.
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
@@ -1423,7 +1453,7 @@ File: omsppl.fd
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-<./Figures/esquemaGeneral.png, id=248, 1284.8pt x 722.7pt>
+<./Figures/esquemaGeneral.png, id=310, 1284.8pt x 722.7pt>
 File: ./Figures/esquemaGeneral.png Graphic file (type png)
 <use ./Figures/esquemaGeneral.png>
 Package pdftex.def Info: ./Figures/esquemaGeneral.png  used on input line 20.
@@ -1434,53 +1464,217 @@ Overfull \hbox (59.88405pt too wide) in paragraph at lines 20--21
  []
 
 1: section
-[5
-
-
-
- <./Figures/esquemaGeneral.png (PNG copy)>]
-LaTeX Info: Redefining \sptext on input line 130.
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
- [6]
-
-LaTeX Warning: Citation 'IEEE:citation' on page 7 undefined on input line 143.
-
-
-LaTeX Warning: Citation 'CIAA' on page 7 undefined on input line 143.
-
-<./Figures/word.jpeg, id=277, 259.97125pt x 194.7275pt>
-File: ./Figures/word.jpeg Graphic file (type jpg)
-<use ./Figures/word.jpeg>
-Package pdftex.def Info: ./Figures/word.jpeg  used on input line 160.
-(pdftex.def)             Requested size: 64.99265pt x 48.68175pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 161.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 161.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 165.
-<./Figures/questionMark.png, id=281, 225.84375pt x 225.84375pt>
-File: ./Figures/questionMark.png Graphic file (type png)
-<use ./Figures/questionMark.png>
-Package pdftex.def Info: ./Figures/questionMark.png  used on input line 172.
-(pdftex.def)             Requested size: 90.33589pt x 90.33589pt.
-LaTeX Info: Redefining \sptext on input line 178.
-LaTeX Info: Redefining \. on input line 178.
-LaTeX Info: Redefining \% on input line 178.
-[7 <./Figures/word.jpeg> <./Figures/questionMark.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 200.
-
-("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-LaTeX Info: Redefining \sptext on input line 239.
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+[7 <./Figures/esquemaGeneral.png (PNG copy)>]
+LaTeX Info: Redefining \sptext on input line 128.
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
  [8]
-\openout2 = `Chapters/Chapter3.aux'.
+Overfull \hbox (1.73506pt too wide) in paragraph at lines 142--143
+[]\T1/ppl/m/n/10.95 Complementariedad: Gra-cias al ba-jo cos-to y fa-ci-li-dad 
+de con-fi-gu-ra-ción, tam-
+ []
 
- (Chapters/Chapter3.tex
+<./Figures/SigfoxOverview.jpg, id=336, 1606.0pt x 903.375pt>
+File: ./Figures/SigfoxOverview.jpg Graphic file (type jpg)
+<use ./Figures/SigfoxOverview.jpg>
+Package pdftex.def Info: ./Figures/SigfoxOverview.jpg  used on input line 155.
+(pdftex.def)             Requested size: 401.49902pt x 225.8432pt.
+
+Overfull \hbox (11.69633pt too wide) in paragraph at lines 155--156
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 160.
+
+LaTeX Warning: Citation 'RSpec' on page 9 undefined on input line 168.
+
+LaTeX Info: Redefining \sptext on input line 171.
+LaTeX Info: Redefining \. on input line 171.
+LaTeX Info: Redefining \% on input line 171.
+[9]
+
+LaTeX Warning: Citation 'RConfg' on page 10 undefined on input line 173.
+
+
+Overfull \hbox (51.23547pt too wide) in paragraph at lines 179--192
+ [][] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 201.
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+[10 <./Figures/SigfoxOverview.jpg>]
+<./Figures/coverageSigfox.PNG, id=356, 545.78906pt x 357.58594pt>
+File: ./Figures/coverageSigfox.PNG Graphic file (type png)
+<use ./Figures/coverageSigfox.PNG>
+Package pdftex.def Info: ./Figures/coverageSigfox.PNG  used on input line 218.
+(pdftex.def)             Requested size: 354.75868pt x 232.4281pt.
+
+
+LaTeX Warning: Citation 'CertificationSigfox' on page 11 undefined on input lin
+e 228.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'CertificationSigfox' on page 11 undefined on input lin
+e 249.
+
+<./Figures/certificacion.PNG, id=363, 380.17032pt x 325.215pt>
+File: ./Figures/certificacion.PNG Graphic file (type png)
+<use ./Figures/certificacion.PNG>
+Package pdftex.def Info: ./Figures/certificacion.PNG  used on input line 252.
+(pdftex.def)             Requested size: 247.10777pt x 211.38724pt.
+LaTeX Info: Redefining \sptext on input line 256.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+[11 <./Figures/coverageSigfox.PNG>]
+
+LaTeX Warning: Citation 'SigfoxCoverage' on page 12 undefined on input line 258
+.
+
+<./Figures/backendSigfox.jpg, id=372, 1115.16624pt x 613.29124pt>
+File: ./Figures/backendSigfox.jpg Graphic file (type jpg)
+<use ./Figures/backendSigfox.jpg>
+Package pdftex.def Info: ./Figures/backendSigfox.jpg  used on input line 265.
+(pdftex.def)             Requested size: 390.31404pt x 214.65514pt.
+
+Overfull \hbox (0.51135pt too wide) in paragraph at lines 265--266
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 272.
+LaTeX Info: Redefining \. on input line 272.
+LaTeX Info: Redefining \% on input line 272.
+[12 <./Figures/certificacion.PNG>]
+
+LaTeX Warning: Citation 'CSS' on page 13 undefined on input line 279.
+
+<./Figures/LoraWanClasses.PNG, id=384, 694.84593pt x 225.84375pt>
+File: ./Figures/LoraWanClasses.PNG Graphic file (type png)
+<use ./Figures/LoraWanClasses.PNG>
+Package pdftex.def Info: ./Figures/LoraWanClasses.PNG  used on input line 285.
+(pdftex.def)             Requested size: 382.16644pt x 124.21443pt.
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 13 undefined on input line 2
+86.
+
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 13 undefined on input line 2
+86.
+
+
+LaTeX Warning: Citation 'FEHRI20181096' on page 13 undefined on input line 293.
+
+
+LaTeX Info: Redefining \sptext on input line 294.
+LaTeX Info: Redefining \. on input line 294.
+LaTeX Info: Redefining \% on input line 294.
+[13 <./Figures/backendSigfox.jpg> <./Figures/LoraWanClasses.PNG>]
+<./Figures/Loraarquitecturenetwork.PNG, id=393, 615.0478pt x 341.02406pt>
+File: ./Figures/Loraarquitecturenetwork.PNG Graphic file (type png)
+<use ./Figures/Loraarquitecturenetwork.PNG>
+Package pdftex.def Info: ./Figures/Loraarquitecturenetwork.PNG  used on input l
+ine 307.
+(pdftex.def)             Requested size: 399.77634pt x 221.66301pt.
+
+Overfull \hbox (9.97365pt too wide) in paragraph at lines 307--308
+ [][] 
+ []
+
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 14 undefined on input line 3
+08.
+
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 14 undefined on input line 3
+08.
+
+
+LaTeX Warning: Citation 'Specification2015' on page 14 undefined on input line 
+313.
+
+LaTeX Info: Redefining \sptext on input line 322.
+LaTeX Info: Redefining \. on input line 322.
+LaTeX Info: Redefining \% on input line 322.
+[14 <./Figures/Loraarquitecturenetwork.PNG>]
+<./Figures/Loracomparacionclases.PNG, id=400, 600.74437pt x 335.00156pt>
+File: ./Figures/Loracomparacionclases.PNG Graphic file (type png)
+<use ./Figures/Loracomparacionclases.PNG>
+Package pdftex.def Info: ./Figures/Loracomparacionclases.PNG  used on input lin
+e 333.
+(pdftex.def)             Requested size: 270.33247pt x 150.7493pt.
+
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 15 undefined on input line 3
+34.
+
+
+LaTeX Warning: Citation 'LoRaAlliance2015' on page 15 undefined on input line 3
+34.
+
+<./Figures/LoraclassA.PNG, id=404, 594.72188pt x 302.63063pt>
+File: ./Figures/LoraclassA.PNG Graphic file (type png)
+<use ./Figures/LoraclassA.PNG>
+Package pdftex.def Info: ./Figures/LoraclassA.PNG  used on input line 351.
+(pdftex.def)             Requested size: 386.56464pt x 196.70757pt.
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 352.
+
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 352.
+
+<./Figures/LoraClaseB.PNG, id=405, 534.49687pt x 267.24844pt>
+File: ./Figures/LoraClaseB.PNG Graphic file (type png)
+<use ./Figures/LoraClaseB.PNG>
+Package pdftex.def Info: ./Figures/LoraClaseB.PNG  used on input line 358.
+(pdftex.def)             Requested size: 400.87166pt x 200.43584pt.
+
+Overfull \hbox (11.06897pt too wide) in paragraph at lines 358--359
+ [][] 
+ []
+
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 359.
+
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 359.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./Figures/LoraClaseC.PNG, id=406, 542.77782pt x 271.76532pt>
+File: ./Figures/LoraClaseC.PNG Graphic file (type png)
+<use ./Figures/LoraClaseC.PNG>
+Package pdftex.def Info: ./Figures/LoraClaseC.PNG  used on input line 366.
+(pdftex.def)             Requested size: 352.80139pt x 176.64536pt.
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 367.
+
+
+LaTeX Warning: Citation 'Ruano2016' on page 15 undefined on input line 367.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Chapters/Chapter3.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [15 <./Figures/Loracomparacionclases.PNG>]
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [16 <./Figures/LoraclassA.PNG> <./Figures/LoraClaseB.PNG> <./Figures/LoraClase
+C.PNG>]
 Cap\'{\i }tulo 3.
 
 ("C:\Users\Julian\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
@@ -1491,65 +1685,103 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 sty"
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 58.
+<./Figures/Hierarchy.jpg, id=420, 794.97pt x 614.295pt>
+File: ./Figures/Hierarchy.jpg Graphic file (type jpg)
+<use ./Figures/Hierarchy.jpg>
+Package pdftex.def Info: ./Figures/Hierarchy.jpg  used on input line 54.
+(pdftex.def)             Requested size: 437.23485pt x 337.86328pt.
+
+Overfull \hbox (47.43216pt too wide) in paragraph at lines 54--55
+ [][] 
+ []
 
 1: section
-[9
+[17
+
+ <./Figures/Hierarchy.jpg>]
+<./Figures/SIGFOX_SCH.PNG, id=429, 1004.25188pt x 438.8897pt>
+File: ./Figures/SIGFOX_SCH.PNG Graphic file (type png)
+<use ./Figures/SIGFOX_SCH.PNG>
+Package pdftex.def Info: ./Figures/SIGFOX_SCH.PNG  used on input line 95.
+(pdftex.def)             Requested size: 401.69363pt x 175.55276pt.
+
+Overfull \hbox (11.89095pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-]
+LaTeX Info: Redefining \sptext on input line 107.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+[18]
+<./Figures/lORA_SCH.PNG, id=439, 569.87906pt x 395.97937pt>
+File: ./Figures/lORA_SCH.PNG Graphic file (type png)
+<use ./Figures/lORA_SCH.PNG>
+Package pdftex.def Info: ./Figures/lORA_SCH.PNG  used on input line 115.
+(pdftex.def)             Requested size: 313.43445pt x 217.78932pt.
+LaTeX Info: Redefining \sptext on input line 125.
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+ [19 <./Figures/SIGFOX_SCH.PNG> <./Figures/lORA_SCH.PNG>]
+<./Figures/inputanalog.PNG, id=447, 512.66531pt x 412.54124pt>
+File: ./Figures/inputanalog.PNG Graphic file (type png)
+<use ./Figures/inputanalog.PNG>
+Package pdftex.def Info: ./Figures/inputanalog.PNG  used on input line 128.
+(pdftex.def)             Requested size: 333.2285pt x 268.14864pt.
+<./Figures/digitalinputs.PNG, id=449, 745.28438pt x 262.73157pt>
+File: ./Figures/digitalinputs.PNG Graphic file (type png)
+<use ./Figures/digitalinputs.PNG>
+Package pdftex.def Info: ./Figures/digitalinputs.PNG  used on input line 139.
+(pdftex.def)             Requested size: 335.37488pt x 118.2281pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 97.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 195.
 )
-LaTeX Info: Redefining \sptext on input line 240.
-LaTeX Info: Redefining \. on input line 240.
-LaTeX Info: Redefining \% on input line 240.
- [10]
-\openout2 = `Chapters/Chapter4.aux'.
-
- (Chapters/Chapter4.tex
-Cap\'{\i }tulo 4.
-)
-1: section
-[11
-
-
+(Chapters/Chapter4.tex
+LaTeX Info: Redefining \sptext on input line 3.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+ [20 <./Figures/inputanalog.PNG> <./Figures/digitalinputs.PNG>]
+LaTeX Info: Redefining \sptext on input line 3.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
+ [21] [22
 
 ]
-\openout2 = `Chapters/Chapter5.aux'.
-
- (Chapters/Chapter5.tex [12
-
-
+Cap\'{\i }tulo 4.
+) (Chapters/Chapter5.tex
+1: section
+[23] [24
 
 ]
 Cap\'{\i }tulo 5.
 )
-1: section
-[13]
 
 LaTeX Warning: Empty bibliography on input line 263.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+1: section
+[25]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
-(memoria.aux
-LaTeX Info: Redefining \sptext on input line 30.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
- (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
-(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux))
+ (memoria.aux
+LaTeX Info: Redefining \sptext on input line 27.
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 620A8E93543F1CE09E62A3C56C872E2F;5248.
+(rerunfilecheck)             Checksum: 3E2130860214D7EA479A80719EF42AAB;5629.
 
 
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
+LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                memoria
 (biblatex)                and rerun LaTeX afterwards.
 
@@ -1558,35 +1790,35 @@ Package logreq Info: Writing requests to 'memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36600 strings out of 492970
- 731326 string characters out of 3126149
- 1158509 words of memory out of 3000000
- 39981 multiletter control sequences out of 15000+200000
- 590571 words of font info for 114 fonts, out of 3000000 for 9000
+ 36251 strings out of 492970
+ 728196 string characters out of 3126149
+ 1130316 words of memory out of 3000000
+ 39637 multiletter control sequences out of 15000+200000
+ 592023 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,20n,77p,816b,2166s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+ 58i,20n,75p,895b,3134s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
 
 {C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Julian/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Julian/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Ju
-lian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/uc
-rr8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/pal
-atino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on memoria.pdf (27 pages, 372086 bytes).
+cm/cmr10.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Julian/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Julian/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Julian/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Julian/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/J
+ulian/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on memoria.pdf (39 pages, 2079964 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 126 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -14,6 +14,7 @@
 
 	void IdleTask_Callback(qEvent_t e);
 	void WisolService_Callback(qEvent_t e);
+	void LoRaWANService_Callback(qEvent_t e);
 	void Leds_Callback(qEvent_t e);
 	void UplinkDispatcher_Callback(qEvent_t e);
 

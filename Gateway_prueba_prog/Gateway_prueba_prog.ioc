@@ -1,6 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
 ADC1.Channel-2\#ChannelRegularConversion=ADC_CHANNEL_4
-ADC1.IPParameters=Rank-2\#ChannelRegularConversion,master,Channel-2\#ChannelRegularConversion,SamplingTime-2\#ChannelRegularConversion,OffsetNumber-2\#ChannelRegularConversion,NbrOfConversionFlag
+ADC1.IPParameters=Rank-2\#ChannelRegularConversion,master,Channel-2\#ChannelRegularConversion,SamplingTime-2\#ChannelRegularConversion,OffsetNumber-2\#ChannelRegularConversion,NbrOfConversionFlag,NbrOfConversion
+ADC1.NbrOfConversion=1
 ADC1.NbrOfConversionFlag=1
 ADC1.OffsetNumber-2\#ChannelRegularConversion=ADC_OFFSET_NONE
 ADC1.Rank-2\#ChannelRegularConversion=1
@@ -192,7 +193,7 @@ SH.ADCx_IN4.ConfNb=1
 USART2.BaudRate=9600
 USART2.IPParameters=VirtualMode-Asynchronous,BaudRate
 USART2.VirtualMode-Asynchronous=VM_ASYNC
-USART3.BaudRate=9600
+USART3.BaudRate=57600
 USART3.IPParameters=VirtualMode-Asynchronous,BaudRate
 USART3.VirtualMode-Asynchronous=VM_ASYNC
 VP_RTC_VS_RTC_Activate.Mode=RTC_Enabled

@@ -110,6 +110,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	HAL_UART_Receive_IT(&huart2,(uint8_t *)&UART_RX.Data,USART_RX_AMOUNT_BYTES);
+	HAL_UART_Receive_IT(&huart3,(uint8_t *)&UART_RX3.Data,USART_RX_AMOUNT_BYTES);
 	SigfoxModule.StatusFlag = WSSFM1XRX_Init(&SigfoxModule, RSTCtrl_Sigfox,
 			RST2Ctrl_Sigfox, PutCharWrapperUart_1,
 			WSSFM1XRX_RCZ4, DiscrimateFrameType, HAL_GetTick,BufferRxFrame,
@@ -121,6 +122,7 @@ int main(void)
 
 	qSetDebugFcn(UART_DEBUG);
 	//HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1); // quitar
+	qResponseInitialize(&ResponseObject);
 
 	ProjectInformation();
 	qSchedulerSetup(HAL_GetTick, 0.001, IdleTask_Callback, 0);
@@ -240,7 +242,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc1.Init.EOCSelection =ADC_EOC_SEQ_CONV; //ADC_EOC_SINGLE_CONV;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 1;
@@ -364,7 +366,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 9600;
+  huart3.Init.BaudRate = 57600;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
@@ -414,7 +416,7 @@ static void MX_RTC_Init(void)
   }
   /** Enable the WakeUp 
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 300, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
   {
     Error_Handler();
   }

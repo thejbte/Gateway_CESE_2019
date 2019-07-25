@@ -7,6 +7,7 @@
 
 #include <Common/Globals.h>
 
+volatile qRespHandler_t ResponseObject;
 
 /** Antirebore */
 DebounceData_t DebounceData;
@@ -38,7 +39,7 @@ uint8_t DownLink =0;
 UART_HandleTypeDef hlpuart1;
 
 UART_HandleTypeDef huart2;
-
+UART_HandleTypeDef huart3;
 
 /** Buffer Rx Frame*/
 char BufferRxFrame[WSSFM1XRX_BUFF_RX_FRAME_LENGTH];
@@ -61,6 +62,7 @@ uint8_t FlagChangeFrequencyPulsations = 0;
 
 
 UART_BufferData_t UART_RX;
+UART_BufferData_t UART_RX3;
 
 
 void RSTCtrl_Sigfox(uint8_t sValue){
@@ -77,9 +79,21 @@ void RST2Ctrl_Sigfox(uint8_t sValue){
 void UART_SIGFOX_TX_STM(void * Sp, char c){
 	HAL_UART_Transmit(&huart2,(uint8_t*)&c,USART_TX_AMOUNT_BYTES,USART_TIMEOUT);
 }
+/* BUS2 UART3*/
+void PutCharWrapperUart_3(void *sp, const char c){
+	while((__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TC) ? SET : RESET) == RESET) {}
+	huart2.Instance->TDR = (c & (uint8_t)0xFFU);
+}
+
+void PutStringWrapperUart_3(void *sp, const char *s){
+	while(*s){
+		PutCharWrapperUart_3(NULL,*s++);
+	}
+}
 
 
-/*Transmitir uart 1 no hal*/
+
+/*Transmitir uart 1 no hal*/ /*Bus 1 */
 void PutCharWrapperUart_1(void *sp, const char c){
 	while((__HAL_UART_GET_FLAG(&huart2, UART_FLAG_TC) ? SET : RESET) == RESET) {}
 	huart2.Instance->TDR = (c & (uint8_t)0xFFU);
@@ -89,6 +103,7 @@ void PutCharWrapperUart_2(void *sp, const char c){
 	while((__HAL_UART_GET_FLAG(&hlpuart1, UART_FLAG_TC) ? SET : RESET) == RESET) {}
 	hlpuart1.Instance->TDR = (c & (uint8_t)0xFFU);
 }
+
 
 void PutStringWrapperUart_2(void *sp, const char *s){
 	while(*s){
@@ -207,10 +222,19 @@ void get_system_reset_cause(void){
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 
 	//sigfoxISRRX(&SigfoxModule, UART_RX.Data);
+	//qResponseISRHandler(&ResponseObject,rxbyte);
 
 	if(huart->Instance == USART2){
 		WSSFM1XRX_ISRRX(&SigfoxModule,UART_RX.Data);  // queda almacenado en  UART_RX.Data;
 		HAL_UART_Receive_IT( &huart2,(uint8_t *)&UART_RX.Data,USART_RX_AMOUNT_BYTES);
+	}
+	if(huart->Instance == USART3){
+		qResponseISRHandler(&ResponseObject,UART_RX3.Data);
+		if(UART_RX3.Index < sizeof(UART_RX3.Buffer)-1){
+			UART_RX3.Buffer[UART_RX3.Index++] = UART_RX3.Data;
+			UART_RX3.Buffer[UART_RX3.Index] = '\0';
+		}else UART_RX3.Index = 0;
+		HAL_UART_Receive_IT( &huart3,(uint8_t *)&UART_RX3.Data,USART_RX_AMOUNT_BYTES);
 	}
 }
 
