@@ -56,6 +56,7 @@ void WisolService_Callback(qEvent_t e){
 	static qSTimer_t timeout;
 
 	qCoroutineBegin{
+
 		HAL_GPIO_WritePin(GPIOC, Gpio4_Bus1_Shutdown_Pin, GPIO_PIN_SET);
 		qDebugMessage("Coroutine from Beginning Sigfox");
 		qDebugMessage("Coroutine from Beginning Lora");
@@ -109,6 +110,7 @@ void LoRaWANService_Callback(qEvent_t e){
 
 	qCRPosition_t state;
 	qCoroutineBegin{
+		HAL_GPIO_WritePin(Sigfox_Rst_GPIO_Port, Sigfox_Rst_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(Sigfox_shutdown_GPIO_Port, Sigfox_shutdown_Pin, GPIO_PIN_SET);
 		qDebugMessage("Coroutine from Beginning Lora");
 		//qTraceMessage("Task_ServiceConfigBG96_Callback");
