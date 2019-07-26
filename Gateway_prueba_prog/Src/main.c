@@ -123,6 +123,7 @@ int main(void)
 	qSetDebugFcn(UART_DEBUG);
 	//HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1); // quitar
 	qResponseInitialize(&ResponseObject);
+	//qResponseInitialize(&ResponseObjectLora);
 
 	ProjectInformation();
 	qSchedulerSetup(HAL_GetTick, 0.001, IdleTask_Callback, 0);
@@ -133,8 +134,10 @@ int main(void)
 	qQueueCreate(&SigFox_UplinkQueue, mQueue_Stack, sizeof(SigfoxServiceRequest_t), 2);
 	qTaskSetState(&Task_Wisol_Service,qEnabled);
 
-	qSchedulerAddSMTask(&Task_ApplicationFSM, MEDIUM_Priority, 0.01, &StateMachine_ApplicationFSM, State_Init,NULL, NULL, State_Failure, NULL, qEnabled, NULL);
-	qSchedulerAddxTask(&Task_Wisol_Service, WisolService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+	//qSchedulerAddSMTask(&Task_ApplicationFSM, MEDIUM_Priority, 0.01, &StateMachine_ApplicationFSM, State_Init,NULL, NULL, State_Failure, NULL, qEnabled, NULL);
+	//qSchedulerAddxTask(&Task_Wisol_Service, WisolService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+	qSchedulerAddxTask(&Task_LoRaWANService, LoRaWANService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+
 	qSchedulerAdd_EventTask(&Task_UplinkDispatcher, UplinkDispatcher_Callback, qHigh_Priority, NULL);
 	qTaskAttachQueue(&Task_UplinkDispatcher, &SigFox_UplinkQueue, qQUEUE_COUNT, 1);
 
@@ -416,7 +419,7 @@ static void MX_RTC_Init(void)
   }
   /** Enable the WakeUp 
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc,300, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
   {
     Error_Handler();
   }

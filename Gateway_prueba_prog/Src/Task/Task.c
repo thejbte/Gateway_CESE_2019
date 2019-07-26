@@ -57,7 +57,8 @@ void WisolService_Callback(qEvent_t e){
 
 	qCoroutineBegin{
 		HAL_GPIO_WritePin(GPIOC, Gpio4_Bus1_Shutdown_Pin, GPIO_PIN_SET);
-		qDebugMessage("Coroutine from Beginning");
+		qDebugMessage("Coroutine from Beginning Sigfox");
+		qDebugMessage("Coroutine from Beginning Lora");
 		SigFoxData.WilsolService_Status = WSSFM1XRX_STATUS_WKUP;
 		PrintStringVar(&hlpuart1,(uint8_t*) "Status = %d ", SigFoxData.WilsolService_Status);
 		ret = WSSFM1XRX_WakeUP(&SigfoxModule,WSSFM1XRX_Wait_Block);
@@ -96,7 +97,7 @@ void WisolService_Callback(qEvent_t e){
 		//qCoroutineWaitUntil( SigFoxData.WilsolService_Status == WSSFM1XRX_STATUS_SEND_MESSAGE ); //WSSFM1XRX_STATUS_SEND_MESSAGE  );  WSSFM1XRX_STATUS_MODULE_INITIALIZED
 
 		SigFoxData.ReadyToUplink = 1;
-
+		//qDebugMessage( SigFoxData.ID);
 		qCoroutineWaitUntil( SigFoxData.WilsolService_Status == WSSFM1XRX_STATUS_IDLE  );
 
 	}qCoroutineEnd;
@@ -104,7 +105,12 @@ void WisolService_Callback(qEvent_t e){
 
 void LoRaWANService_Callback(qEvent_t e){
 	static char BufferAux[100];
+	static uint8_t contRetry,i=0;
+
+	qCRPosition_t state;
 	qCoroutineBegin{
+		HAL_GPIO_WritePin(Sigfox_shutdown_GPIO_Port, Sigfox_shutdown_Pin, GPIO_PIN_SET);
+		qDebugMessage("Coroutine from Beginning Lora");
 		//qTraceMessage("Task_ServiceConfigBG96_Callback");
 		//qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"APP RDY\r\n",4)));
 
@@ -120,85 +126,229 @@ void LoRaWANService_Callback(qEvent_t e){
 		mac set retx 3
 		*/
 
+
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"sys reset\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"RN2903\r\n",0)) );
+
+
+		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set devaddr 26021CF3\r\n");
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set devaddr 26021CF3\r\n");
+		qDebugMessage("mac set devaddr 26021CF3\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set appeui 70B3D57ED001E6F9\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set deveui 0004A30B00264D28\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set nwkskey C42DD69087BFA056D282134269E49422\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set appskey EFF299DC7EF67B8EF02509FA0BFF6005\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set ar off\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set sync 34\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac set retx 3\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-
-
-		for(int i=0; i< 72 ; i++){
-			//qSTimerSet(&Timeout,0.2);
-			qSTimerSet(&Timeout,2.0);
-			sprintf((void*)BufferAux,"mac set ch status %d ",i);
-			qPrintString(UART_DEBUG,NULL,BufferAux);
-			qPrintString(UART_DEBUG,NULL,"off\r\n");
-			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-		}
-		for(int i=8; i< 15 ; i++){
-			qSTimerSet(&Timeout,2.0);
-			sprintf((void*)BufferAux,"mac set ch status %d ",i);
-			qPrintString(UART_DEBUG,NULL,BufferAux);
-			qPrintString(UART_DEBUG,NULL,"on\r\n");
-			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
 		}
 
+		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
-		qPrintString(UART_DEBUG,NULL,"mac set ch status 65 on\r\n");
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set appeui 70B3D57ED001E6F9\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
 
+		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac save\r\n");
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set deveui 0004A30B00264D28\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
 
+		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac save\r\n");
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set nwkskey C42DD69087BFA056D282134269E49422\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
 
+		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
-		//memset(BG96_Data.Frame,0,sizeof(BG96_Data.Frame));
-		qPrintString(UART_DEBUG,NULL,"mac join abp\r\n");
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set appskey EFF299DC7EF67B8EF02509FA0BFF6005\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set ar off\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set sync 34\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set retx 3\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+
+		 	 i=0;
+			qCoroutinePositionGet(state);
+			qSTimerSet(&Timeout,2.0);
+			sprintf((void*)BufferAux,"mac set ch status %d ",i);
+			qPrintString(UART_LORA,NULL,BufferAux);
+			qPrintString(UART_LORA,NULL,"off\r\n");
+			//qCoroutineYield;
+			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+			if( i<72 ){
+				if(!qSTimerExpired(&Timeout)){
+					i++;
+					qCoroutinePositionRestore(state);
+				}else {
+					contRetry++;
+						if(contRetry >=5 ){
+							contRetry = 0;
+							qCoroutineRestart;
+						}else qCoroutinePositionRestore(state);
+				}
+			}
+
+
+		 	 i=8;
+			qCoroutinePositionGet(state);
+			qSTimerSet(&Timeout,2.0);
+			sprintf((void*)BufferAux,"mac set ch status %d ",i);
+			qPrintString(UART_LORA,NULL,BufferAux);
+			qPrintString(UART_LORA,NULL,"on\r\n");
+			//qCoroutineYield;
+			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+			if( i<16 ){
+				if(!qSTimerExpired(&Timeout)){
+					i++;
+					qCoroutinePositionRestore(state);
+				}else {
+					contRetry++;
+						if(contRetry >=5 ){
+							contRetry = 0;
+							qCoroutineRestart;
+						}else qCoroutinePositionRestore(state);
+				}
+			}
+
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac set ch status 65 on\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac save\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac save\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
+
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,2.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac join abp\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"accepted\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
 
+		qCoroutinePositionGet(state);
+		qSTimerSet(&Timeout,5.0);
+		qPrintString(UART_LORA,NULL,"mac tx cnf 1 0000000009c7\r\n");
+		qDebugMessage("mac tx cnf 1 0000000009c7\r\n");
 		//keys_not_init  or invalid_param
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"accepted\r\n",4))||(qSTimerExpired(&Timeout)));
+		if(qSTimerExpired(&Timeout)){
+			contRetry++;
+			if(contRetry >=5 ){
+				contRetry = 0;
+				qCoroutineRestart;
+			}else qCoroutinePositionRestore(state);
+		}
 
-
+		qCoroutineWaitUntil( SigFoxData.WilsolService_Status == WSSFM1XRX_STATUS_IDLE  );
 		//qPrintString(UART_BG96,NULL,BG96_Data.Frame);
 	}qCoroutineEnd;
 

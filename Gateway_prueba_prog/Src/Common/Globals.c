@@ -8,6 +8,7 @@
 #include <Common/Globals.h>
 
 volatile qRespHandler_t ResponseObject;
+volatile qRespHandler_t ResponseObjectLora;
 
 /** Antirebore */
 DebounceData_t DebounceData;
@@ -20,7 +21,7 @@ uint8_t ContTime = 0;
 ColorRGB_t Color;
 /** Scheduler */
 
-qTask_t Task_ApplicationFSM, Task_UplinkDispatcher, Task_Wisol_Service, Task_Leds;
+qTask_t Task_ApplicationFSM, Task_UplinkDispatcher, Task_Wisol_Service, Task_Leds,Task_LoRaWANService;
 
 qIOEdgeCheck_t InputCheck;
 qIONode_t InputButton;
@@ -82,7 +83,7 @@ void UART_SIGFOX_TX_STM(void * Sp, char c){
 /* BUS2 UART3*/
 void PutCharWrapperUart_3(void *sp, const char c){
 	while((__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TC) ? SET : RESET) == RESET) {}
-	huart2.Instance->TDR = (c & (uint8_t)0xFFU);
+	huart3.Instance->TDR = (c & (uint8_t)0xFFU);
 }
 
 void PutStringWrapperUart_3(void *sp, const char *s){

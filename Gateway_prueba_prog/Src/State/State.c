@@ -45,22 +45,25 @@ qSM_Status_t State_Sleep(qSM_t *fsm){
 }
 /***********************************************************************************************/
 qSM_Status_t State_Init(qSM_t *fsm){
-
+		float ADC_1 =2.786;
 	if(fsm->StateFirstEntry){
 		qTraceMessage("[STATE] : State_Init\r\n");
 		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_SET);
 		 HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_RESET);
 		 HAL_ADC_Start(&hadc1);
 		 HAL_ADC_PollForConversion(&hadc1, 1000);
-		 qDebugDecimal(HAL_ADC_GetValue(&hadc1));
+		 //qDebugDecimal(HAL_ADC_GetValue(&hadc1));
 		 HAL_ADC_Stop(&hadc1);
-
+		 qDebugFloat(ADC_1);
+		 DataFrame.ADC_0 = 2503;
 		//qRBufferPush(&SigFox_UplinkQueue, &DataFrame);
 		qRBufferPush(&SigFox_UplinkQueue, &DataFrame);
 	}
 
 
 	if(qRBufferEmpty(&SigFox_UplinkQueue)){
+		qDebugMessage("mac tx cnf 1 0000000000000000000009c7\r\n");
+		qDebugMessage("AT$SF=0000000000000000000009c7\r\n");
 		fsm->NextState = State_Sleep;
 	}
 	return qSM_EXIT_SUCCESS;

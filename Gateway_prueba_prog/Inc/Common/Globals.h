@@ -99,16 +99,19 @@
 
 /** *UASRT2  */
 #define UART_DEBUG PutCharWrapperUart_2
-
+#define UART_LORA PutCharWrapperUart_3
 extern volatile qRespHandler_t ResponseObject;
+ extern volatile qRespHandler_t ResponseObjectLora;
 
 void PrintStringVar(UART_HandleTypeDef *huart,uint8_t *String, uint16_t  Variable);
 void PrintString(UART_HandleTypeDef *huart,uint8_t *pData);
 void PutCharWrapperUart_1(void *sp, const char c);
 void PutCharWrapperUart_2(void *sp, const char c);
 void PutStringWrapperUart_2(void *sp, const char *s);
+void PutCharWrapperUart_3(void *sp, const char c);
+void PutStringWrapperUart_3(void *sp, const char *s);
 /***************Scheduler*****************************/
-extern qTask_t Task_ApplicationFSM, Task_UplinkDispatcher, Task_Wisol_Service, Task_Leds;
+extern qTask_t Task_ApplicationFSM, Task_UplinkDispatcher, Task_Wisol_Service, Task_Leds,Task_LoRaWANService;
 qSM_t StateMachine_ApplicationFSM;
 extern  qSTimer_t Timeout;
 extern qRBuffer_t SigFox_UplinkQueue;
