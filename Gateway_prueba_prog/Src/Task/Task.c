@@ -133,13 +133,19 @@ void LoRaWANService_Callback(qEvent_t e){
 		qPrintString(UART_LORA,NULL,"sys reset\r\n");
 		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"RN2903\r\n",0)) );
 
+		//qPrintString(PutCharWrapperUart_1,NULL,UART_RX3.Buffer);
 
 		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
-		qPrintString(UART_LORA,NULL,"mac set devaddr 26021CF3\r\n");
-		qDebugMessage("mac set devaddr 26021CF3\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qPrintString(UART_LORA,NULL,"mac set devaddr 26021A71\r\n");
+
+		qDebugMessage("mac set devaddr 26021A71\r\n");
+
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
+
+		//qPrintString(PutCharWrapperUart_1,NULL,UART_RX3.Buffer);
+
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -152,7 +158,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac set appeui 70B3D57ED001E6F9\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -165,7 +171,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac set deveui 0004A30B00264D28\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -177,8 +183,8 @@ void LoRaWANService_Callback(qEvent_t e){
 		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
-		qPrintString(UART_LORA,NULL,"mac set nwkskey C42DD69087BFA056D282134269E49422\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qPrintString(UART_LORA,NULL,"mac set nwkskey C4B2C1017D1F621B2866535BF13FDA29\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -190,8 +196,8 @@ void LoRaWANService_Callback(qEvent_t e){
 		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
-		qPrintString(UART_LORA,NULL,"mac set appskey EFF299DC7EF67B8EF02509FA0BFF6005\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qPrintString(UART_LORA,NULL,"mac set appskey 2683DB00F5C82D7F554E89502C9A3BB9\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -204,7 +210,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac set ar off\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -217,7 +223,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac set sync 34\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -230,7 +236,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac set retx 3\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -247,8 +253,8 @@ void LoRaWANService_Callback(qEvent_t e){
 			qPrintString(UART_LORA,NULL,BufferAux);
 			qPrintString(UART_LORA,NULL,"off\r\n");
 			//qCoroutineYield;
-			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-			if( i<72 ){
+			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
+			if( i<71 ){
 				if(!qSTimerExpired(&Timeout)){
 					i++;
 					qCoroutinePositionRestore(state);
@@ -267,10 +273,10 @@ void LoRaWANService_Callback(qEvent_t e){
 			qSTimerSet(&Timeout,2.0);
 			sprintf((void*)BufferAux,"mac set ch status %d ",i);
 			qPrintString(UART_LORA,NULL,BufferAux);
-			qPrintString(UART_LORA,NULL,"on\r\n");
+			qPrintString(UART_LORA,NULL,"off\r\n");
 			//qCoroutineYield;
-			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
-			if( i<16 ){
+			qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
+			if( i<15 ){
 				if(!qSTimerExpired(&Timeout)){
 					i++;
 					qCoroutinePositionRestore(state);
@@ -287,8 +293,8 @@ void LoRaWANService_Callback(qEvent_t e){
 		qCoroutinePositionGet(state);
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
-		qPrintString(UART_LORA,NULL,"mac set ch status 65 on\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qPrintString(UART_LORA,NULL,"mac set ch status 8 on\r\n");
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -301,7 +307,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac save\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -314,7 +320,7 @@ void LoRaWANService_Callback(qEvent_t e){
 		qSTimerSet(&Timeout,2.0);
 		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 		qPrintString(UART_LORA,NULL,"mac save\r\n");
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"OK\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"ok\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
@@ -337,19 +343,21 @@ void LoRaWANService_Callback(qEvent_t e){
 		}
 
 		qCoroutinePositionGet(state);
-		qSTimerSet(&Timeout,5.0);
-		qPrintString(UART_LORA,NULL,"mac tx cnf 1 0000000009c7\r\n");
-		qDebugMessage("mac tx cnf 1 0000000009c7\r\n");
+		qSTimerSet(&Timeout,20.0);
+		memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
+		qPrintString(UART_LORA,NULL,"mac tx uncnf 1 0000000009c7\r\n");
+		qDebugMessage("mac tx uncnf 1 0000000009c7\r\n");
 		//keys_not_init  or invalid_param
-		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"accepted\r\n",4))||(qSTimerExpired(&Timeout)));
+		qCoroutineWaitUntil((qResponseReceived(&ResponseObject,"accept\r\n",4))||(qSTimerExpired(&Timeout)));
 		if(qSTimerExpired(&Timeout)){
 			contRetry++;
 			if(contRetry >=5 ){
 				contRetry = 0;
+				memset(UART_RX3.Buffer,0,sizeof(UART_RX3.Buffer));
 				qCoroutineRestart;
 			}else qCoroutinePositionRestore(state);
 		}
-
+		LoRaReadyToUplink = 1;
 		qCoroutineWaitUntil( SigFoxData.WilsolService_Status == WSSFM1XRX_STATUS_IDLE  );
 		//qPrintString(UART_BG96,NULL,BG96_Data.Frame);
 	}qCoroutineEnd;

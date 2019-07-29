@@ -134,9 +134,9 @@ int main(void)
 	qQueueCreate(&SigFox_UplinkQueue, mQueue_Stack, sizeof(SigfoxServiceRequest_t), 2);
 	qTaskSetState(&Task_Wisol_Service,qEnabled);
 
-	//qSchedulerAddSMTask(&Task_ApplicationFSM, MEDIUM_Priority, 0.01, &StateMachine_ApplicationFSM, State_Init,NULL, NULL, State_Failure, NULL, qEnabled, NULL);
-	//qSchedulerAddxTask(&Task_Wisol_Service, WisolService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
-	qSchedulerAddxTask(&Task_LoRaWANService, LoRaWANService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+	qSchedulerAddSMTask(&Task_ApplicationFSM, MEDIUM_Priority, 0.01, &StateMachine_ApplicationFSM, State_Init,NULL, NULL, State_Failure, NULL, qEnabled, NULL);
+	qSchedulerAddxTask(&Task_Wisol_Service, WisolService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+	qSchedulerAddxTask(&Task_LoRaWANService, LoRaWANService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qDisabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
 
 	qSchedulerAdd_EventTask(&Task_UplinkDispatcher, UplinkDispatcher_Callback, qHigh_Priority, NULL);
 	qTaskAttachQueue(&Task_UplinkDispatcher, &SigFox_UplinkQueue, qQUEUE_COUNT, 1);
@@ -146,12 +146,22 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		 HAL_ADC_Start(&hadc1);
+		 while(HAL_ADC_PollForConversion(&hadc1, 0) == HAL_OK ){
+
+		 }
+		 qDebugDecimal(HAL_ADC_GetValue(&hadc1));
+		 HAL_ADC_Stop(&hadc1);
+
   }
+
+
   /* USER CODE END 3 */
 }
 
@@ -167,14 +177,10 @@ void SystemClock_Config(void)
 
   /** Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI
-                              |RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -201,12 +207,12 @@ void SystemClock_Config(void)
   PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
   PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
-  PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+  PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_HSI;
   PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
   PeriphClkInit.PLLSAI1.PLLSAI1N = 16;
   PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV7;
   PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
-  PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+  PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV8;
   PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
@@ -241,7 +247,7 @@ static void MX_ADC1_Init(void)
   /** Common config 
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
@@ -419,7 +425,7 @@ static void MX_RTC_Init(void)
   }
   /** Enable the WakeUp 
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc,300, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
   {
     Error_Handler();
   }

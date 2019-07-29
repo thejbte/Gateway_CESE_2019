@@ -1,6 +1,6 @@
 Configuration	Gateway_prueba_prog
 STM32CubeMX 	5.2.1
-Date	07/24/2019
+Date	07/28/2019
 MCU	STM32L471RGTx
 
 
@@ -70,7 +70,7 @@ SOFTWARE PROJECT
 
 Project Settings : 
 Project Name : Gateway_prueba_prog
-Project Folder : C:\Users\ingeniero04\Desktop\LORA\Gateway_prueba_prog
+Project Folder : C:\Users\Julian\Desktop\TdeG_CESE\Gateway_CESE_2019\Gateway_prueba_prog
 Toolchain / IDE : STM32CubeIDE
 Firmware Package Name and Version : STM32Cube FW_L4 V1.14.0
 

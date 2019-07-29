@@ -57,7 +57,7 @@ WSSFM1XRXConfig_t SigfoxModule;
 /*Wisol service*/
 SigFox_Info_t SigFoxData;
 
-
+uint8_t LoRaReadyToUplink;
 /*Others*/
 uint8_t FlagChangeFrequencyPulsations = 0;
 
@@ -235,7 +235,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 			UART_RX3.Buffer[UART_RX3.Index++] = UART_RX3.Data;
 			UART_RX3.Buffer[UART_RX3.Index] = '\0';
 		}else UART_RX3.Index = 0;
-		HAL_UART_Receive_IT( &huart3,(uint8_t *)&UART_RX3.Data,USART_RX_AMOUNT_BYTES);
+		HAL_UART_Receive_IT(&huart3,(uint8_t *)&UART_RX3.Data,USART_RX_AMOUNT_BYTES);
 	}
 }
 

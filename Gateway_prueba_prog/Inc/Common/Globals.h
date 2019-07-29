@@ -154,7 +154,7 @@ extern FLASH_EraseInitTypeDef FLASHMEM;
 #define InitMemoryAddressReserved	0x08007C00
 /*******************Sigfox Library**************************/
 extern  WSSFM1XRXConfig_t SigfoxModule;
-
+extern uint8_t LoRaReadyToUplink;
 /*
  ** ===================================================================
  ** 						Wisol service data
@@ -190,10 +190,10 @@ extern SigFox_Info_t SigFoxData;
 extern uint8_t FlagChangeFrequencyPulsations;
 
 typedef struct {
-uint8_t Buffer[25];
-uint8_t Index;
-uint8_t Data;
-uint8_t Ready;
+volatile uint8_t Buffer[40];
+volatile uint8_t Index;
+volatile uint8_t Data;
+volatile uint8_t Ready;
 uint8_t Downlink;
 }UART_BufferData_t;
 extern UART_BufferData_t UART_RX;
