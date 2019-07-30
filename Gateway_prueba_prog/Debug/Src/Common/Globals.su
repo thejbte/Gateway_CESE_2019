@@ -11,6 +11,6 @@ Globals.c:135:6:PrintString	16	static
 Globals.c:144:23:DiscrimateFrameType	24	static
 Globals.c:173:6:IndicatorBlink	16	static
 Globals.c:185:15:LedColor	16	static
-Globals.c:188:6:get_system_reset_cause	16	static
-Globals.c:223:6:HAL_UART_RxCpltCallback	16	static
-Globals.c:242:6:ProjectInformation	8	static
+Globals.c:188:6:get_system_reset_cause	24	static
+Globals.c:231:6:HAL_UART_RxCpltCallback	16	static
+Globals.c:250:6:ProjectInformation	8	static

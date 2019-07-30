@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/Julian/Desktop/TdeG_CESE/Gateway_CESE_2019/Gateway_prueba_prog/Inc
+HeaderPath=C:/Users/ingeniero04/Desktop/CESETDEG/Gateway_CESE_2019/Gateway_prueba_prog/Inc
 HeaderFiles=stm32l4xx_it.h;stm32l4xx_hal_conf.h;main.h;
-SourcePath=C:/Users/Julian/Desktop/TdeG_CESE/Gateway_CESE_2019/Gateway_prueba_prog/Src
+SourcePath=C:/Users/ingeniero04/Desktop/CESETDEG/Gateway_CESE_2019/Gateway_prueba_prog/Src
 SourceFiles=stm32l4xx_it.c;stm32l4xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

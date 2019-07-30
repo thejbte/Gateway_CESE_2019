@@ -126,6 +126,7 @@ int main(void)
 	//qResponseInitialize(&ResponseObjectLora);
 
 	ProjectInformation();
+	get_system_reset_cause();
 	qSchedulerSetup(HAL_GetTick, 0.001, IdleTask_Callback, 0);
 
 	qEdgeCheck_Initialize(&InputCheck, QREG_32BIT, 100);
@@ -153,7 +154,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		 HAL_ADC_Start(&hadc1);
-		 while(HAL_ADC_PollForConversion(&hadc1, 0) == HAL_OK ){
+		 HAL_ADC_PollForConversion(&hadc1, 0);
+		 //while(HAL_ADC_PollForConversion(&hadc1, 0) == HAL_OK )
+		 {
 
 		 }
 		 qDebugDecimal(HAL_ADC_GetValue(&hadc1));

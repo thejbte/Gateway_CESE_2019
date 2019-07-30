@@ -42,8 +42,8 @@ Gateway_prueba_prog.list \
 all: Gateway_prueba_prog.elf secondary-outputs
 
 # Tool invocations
-Gateway_prueba_prog.elf: $(OBJS) $(USER_OBJS) C:\Users\Julian\Desktop\TdeG_CESE\Gateway_CESE_2019\Gateway_prueba_prog\STM32L471RGTX_FLASH.ld
-	arm-none-eabi-gcc -o "Gateway_prueba_prog.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Julian\Desktop\TdeG_CESE\Gateway_CESE_2019\Gateway_prueba_prog\STM32L471RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gateway_prueba_prog.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Gateway_prueba_prog.elf: $(OBJS) $(USER_OBJS) C:\Users\ingeniero04\Desktop\CESETDEG\Gateway_CESE_2019\Gateway_prueba_prog\STM32L471RGTX_FLASH.ld
+	arm-none-eabi-gcc -o "Gateway_prueba_prog.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ingeniero04\Desktop\CESETDEG\Gateway_CESE_2019\Gateway_prueba_prog\STM32L471RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gateway_prueba_prog.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

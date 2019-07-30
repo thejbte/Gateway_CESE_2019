@@ -256,24 +256,27 @@ typedef struct {
 
 #ifdef Doce_Bytes
 	union {
-		uint8_t Others[4];
+		uint8_t Others[12];
 
 		/** Si solo es un canal de 12 bi*/
 		struct {
-			unsigned ADC_12 :12;	/*Canal AN 12 bits*/
-			unsigned DUMMY	:20;	/*N/A*/
-		};
-		struct {
 			unsigned ADC_0:12;		/*Canal AN 12 bits*/
 			unsigned ADC_1:12;		/*Canal AN 12 bits*/
-			unsigned DI:1; 						// DI  LSB en el orden que lo coloque ac�  DI, BattLow, Type  hacia abajo
-			unsigned BattLow:1;
-			unsigned Type:5;
+			unsigned ADC_2:12;		/*Canal AN 12 bits*/
+			unsigned dummy: 4;
+			unsigned DI0:1; 						// DI  LSB en el orden que lo coloque ac�  DI, BattLow, Type  hacia abajo
+			unsigned DI1:1;
+			unsigned DI2:1;
+			unsigned DI3:1;
+			unsigned DI4:1;
 			unsigned periodic:1;
+			unsigned dummy2: 2;
+			unsigned dumm3: 20;
+			unsigned dumm4: 20;
+			unsigned dumm5: 8;
 		};
+
 	}Doce_Bytes;
-	float Longitud;
-	float Latitud;
 
 #endif
 }DataFrame_t;

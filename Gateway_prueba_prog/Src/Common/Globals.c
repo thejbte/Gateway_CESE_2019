@@ -188,31 +188,39 @@ GPIO_PinState LedColor(char color, GPIO_PinState state){}
 void get_system_reset_cause(void){
 	__HAL_RCC_PWR_CLK_ENABLE(); /*para detectar sorce*/
 	//	/** source event wakeup*/
-//
-//	/*Wup Pin PWR_CSR_WUF*/
-//	if(PWR-> CSR  & PWR_FLAG_WU & (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0))){
-//		PrintString(&huart3, (uint8_t *)"Wake up Transmision Pin\r\n");
+
+	/*Wup Pin PWR_CSR_WUF*/
+
+
+//	if(PWR-> CSR  & PWR_FLAG_WU ){
+//		qDebugMessage("Wake up Transmision Pin\r\n");
 //		PWR-> CR |=  PWR_CR_CWUF;
-//		Flags_globals.flag_ON_WAKEUP_TIME = 0;
-//	}else if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)){
-//		/*Reset por software*/
-//		__HAL_RCC_CLEAR_RESET_FLAGS();
-//		PrintString(&huart3, (uint8_t *)"SOFTWARE_RESET\r\n");
-//		ContTime = 0;
-//		Flash_Write(FLASHMEM.PageAddress + 2,ContTime);
-//	}
-//	else if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST)){
-//		/*Power ON/DOWN*/
-//		//Flags_globals.flag_ON_WAKEUP_TIME = 1;
-//		ContTime = 0;
-//		Flash_Write(FLASHMEM.PageAddress + 2,ContTime);
-//		PrintString(&huart3, (uint8_t *)"POWER-ON_RESET (POR) / POWER-DOWN_RESET (PDR)\r\n");
-//		__HAL_RCC_CLEAR_RESET_FLAGS();
-//	}else {
-//		/*Variable para reporte por tiempo*/
-//		Flags_globals.flag_ON_WAKEUP_TIME = 1;
-//		PrintString(&huart3, (uint8_t *)"Wake up Transmision Time\r\n");
-//	}
+//		DataFrame.periodic = 1;
+//	}else
+	if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST)){
+		/*Reset por software*/
+		__HAL_RCC_CLEAR_RESET_FLAGS();
+		DataFrame.periodic = 0;
+		qDebugMessage("SOFTWARE_RESET\r\n");
+
+		//ContTime = 0;
+		//Flash_Write(FLASHMEM.PageAddress + 2,ContTime);
+	}
+	else if (__HAL_RCC_GET_FLAG(RCC_FLAG_BORRST)){
+		/*Power ON/DOWN*/
+		//Flags_globals.flag_ON_WAKEUP_TIME = 1;
+		//ContTime = 0;
+		//Flash_Write(FLASHMEM.PageAddress + 2,ContTime);
+		qDebugMessage("POWER-ON_RESET (POR) / POWER-DOWN_RESET (PDR)\r\n");
+
+		DataFrame.periodic = 0;
+		__HAL_RCC_CLEAR_RESET_FLAGS();
+	}else {
+		/*Variable para reporte por tiempo*/
+		DataFrame.periodic = 1;
+		qDebugMessage("Wake up Transmision Time\r\n");
+
+	}
 
 }
 /*
