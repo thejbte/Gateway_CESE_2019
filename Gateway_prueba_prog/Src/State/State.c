@@ -51,7 +51,7 @@ qSM_Status_t State_Init(qSM_t *fsm){
 		qTraceMessage("[STATE] : State_Init\r\n");
 		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_SET);
 		 HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_RESET);
-
+		 memset(DataFrame.Others,0,12);
 
 		 ADC_0 = App_ADCReadSingleChanne(&hadc1, 4)*(3.3/4095.0)/0.452;
 		 ADC_1 = App_ADCReadSingleChanne(&hadc1, 9)*(3.3/4095.0)/0.599;
@@ -65,8 +65,17 @@ qSM_Status_t State_Init(qSM_t *fsm){
 		 qDebugFloat(ADC_1);
 		 qDebugFloat(ADC_2);
 		 //DataFrame.Others[6] = 0x06;
-		 DataFrame.DI1=1;
-		 DataFrame.DI2=1;
+		 DataFrame.DI0=HAL_GPIO_ReadPin(GPIOA, IN1_Pin);
+		 DataFrame.DI1=HAL_GPIO_ReadPin(GPIOA, IN2_Pin);
+		 DataFrame.DI2=HAL_GPIO_ReadPin(GPIOA, IN3_Pin);
+		 DataFrame.DI3=HAL_GPIO_ReadPin(IN4_GPIO_Port, IN4_Pin);
+		 DataFrame.DI4=0;
+		 qDebugDecimal(DataFrame.DI0);
+		 qDebugDecimal(DataFrame.DI1);
+		 qDebugDecimal(DataFrame.DI2);
+		 qDebugDecimal(DataFrame.DI3);
+		 qDebugDecimal(DataFrame.DI4);
+
 
 		 //DataFrame.periodic = 1;
 		//qRBufferPush(&SigFox_UplinkQueue, &DataFrame);
