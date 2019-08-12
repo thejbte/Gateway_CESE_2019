@@ -45,21 +45,25 @@ qSM_Status_t State_Sleep(qSM_t *fsm){
 }
 /***********************************************************************************************/
 qSM_Status_t State_Init(qSM_t *fsm){
-		float ADC_1 =2.786,ADC_2 = 4.5;
+	float ADC_0,ADC_1,ADC_2;
+
 	if(fsm->StateFirstEntry){
 		qTraceMessage("[STATE] : State_Init\r\n");
 		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_SET);
 		 HAL_GPIO_WritePin(GPIOB,GPIO_PIN_2 , GPIO_PIN_RESET);
-		 HAL_ADC_Start(&hadc1);
-		 while(HAL_ADC_PollForConversion(&hadc1, 0) == HAL_OK ){
 
-		 }
-		 qDebugDecimal(HAL_ADC_GetValue(&hadc1));
-		 HAL_ADC_Stop(&hadc1);
+
+		 ADC_0 = App_ADCReadSingleChanne(&hadc1, 4)*(3.3/4095.0)/0.452;
+		 ADC_1 = App_ADCReadSingleChanne(&hadc1, 9)*(3.3/4095.0)/0.599;
+		 ADC_2 = App_ADCReadSingleChanne(&hadc1, 3)*(3.3/4095.0);
+		 //AN_IN1= ADC123_IN3(CORRIENTE)  AN_IN2 = ADC123_IN4(0-10) AN_IN3 = ADC12_IN9(0-5)
+		 DataFrame.ADC_0 = ADC_0*58.5 + 2340; //ADC123_IN4(0-10)
+		 DataFrame.ADC_1 = ADC_1*58.5 + 2340; //ADC12_IN9(0-5)
+		 DataFrame.ADC_2 = ADC_2*58.5 + 2340;
+
+		 qDebugFloat(ADC_0);
 		 qDebugFloat(ADC_1);
 		 qDebugFloat(ADC_2);
-		 DataFrame.ADC_0 = 2503;
-		 DataFrame.ADC_1 = 2603;
 		 //DataFrame.Others[6] = 0x06;
 		 DataFrame.DI1=1;
 		 DataFrame.DI2=1;
@@ -71,9 +75,10 @@ qSM_Status_t State_Init(qSM_t *fsm){
 
 
 	if(qRBufferEmpty(&SigFox_UplinkQueue)){// && LoRaReadyToUplink){
-		qDebugMessage("mac tx cnf 1 000000000006000000A2B9c7\r\n");  // 06 = di2 =1 di1 = 1 A2B 2603 = 4.5v  de 5    9c7 de 0-5v
-		qDebugMessage("AT$SF=000000000006000000A2B9c7\r\n");
+		//qDebugMessage("mac tx cnf 1 000000000006000000A2B9c7\r\n");  // 06 = di2 =1 di1 = 1 A2B 2603 = 4.5v  de 5    9c7 de 0-5v
+		//qDebugMessage("AT$SF=000000000006000000A2B9c7\r\n");
 		LoRaReadyToUplink = 0;
+		qTraceMem(&DataFrame,sizeof(DataFrame));
 		fsm->NextState = State_Sleep;
 
 	}

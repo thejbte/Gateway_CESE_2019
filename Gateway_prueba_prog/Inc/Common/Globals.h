@@ -342,7 +342,7 @@ void get_system_reset_cause(void);
 extern uint8_t mQueue_Stack[3*sizeof(SigfoxServiceRequest_t)];
 
 void ProjectInformation(void);
-
+uint32_t App_ADCReadSingleChanne(ADC_HandleTypeDef* hadc, uint32_t Channel);
 #endif /* GLOBALS_H_ */
 
 

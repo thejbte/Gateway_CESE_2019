@@ -258,3 +258,20 @@ void ProjectInformation(void) {
 	PutStringWrapperUart_2(NULL,"=========================================\r\n\r\n");
 }
 
+uint32_t App_ADCReadSingleChanne(ADC_HandleTypeDef* hadc, uint32_t Channel){
+	uint32_t value = 0ul;
+	ADC_ChannelConfTypeDef sConfig = {0};
+	sConfig.Channel = Channel << 26U;
+	sConfig.Rank = ADC_REGULAR_RANK_1;
+	sConfig.SamplingTime = ADC_SAMPLETIME_640CYCLES_5;
+	sConfig.SingleDiff = ADC_SINGLE_ENDED;
+	sConfig.OffsetNumber = ADC_OFFSET_NONE;
+	sConfig.Offset = 0;
+
+	HAL_ADC_ConfigChannel(hadc, &sConfig);
+	HAL_ADC_Start(hadc);
+	while( HAL_ADC_PollForConversion(hadc, 0) == HAL_OK ){}
+	value = HAL_ADC_GetValue(hadc);
+	HAL_ADC_Stop(hadc);
+	return value;
+}

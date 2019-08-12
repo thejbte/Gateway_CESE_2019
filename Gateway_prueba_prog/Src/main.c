@@ -71,6 +71,7 @@ static void MX_RTC_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
 /* USER CODE END 0 */
 
 /**
@@ -137,7 +138,7 @@ int main(void)
 
 	qSchedulerAddSMTask(&Task_ApplicationFSM, MEDIUM_Priority, 0.01, &StateMachine_ApplicationFSM, State_Init,NULL, NULL, State_Failure, NULL, qEnabled, NULL);
 	qSchedulerAddxTask(&Task_Wisol_Service, WisolService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qEnabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
-	qSchedulerAddxTask(&Task_LoRaWANService, LoRaWANService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qDisabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
+	//qSchedulerAddxTask(&Task_LoRaWANService, LoRaWANService_Callback, MEDIUM_Priority, 0.1, qPeriodic, qDisabled, NULL); /*en el mismo tiempo de la maquina de estados se pega en ATRC?? corutina??*/
 
 	qSchedulerAdd_EventTask(&Task_UplinkDispatcher, UplinkDispatcher_Callback, qHigh_Priority, NULL);
 	qTaskAttachQueue(&Task_UplinkDispatcher, &SigFox_UplinkQueue, qQUEUE_COUNT, 1);
@@ -153,14 +154,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		 HAL_ADC_Start(&hadc1);
-		 HAL_ADC_PollForConversion(&hadc1, 0);
-		 //while(HAL_ADC_PollForConversion(&hadc1, 0) == HAL_OK )
-		 {
-
-		 }
-		 qDebugDecimal(HAL_ADC_GetValue(&hadc1));
-		 HAL_ADC_Stop(&hadc1);
+	  //AN_IN1= ADC123_IN3(CORRIENTE)  AN_IN2 = ADC123_IN4(0-10) AN_IN3 = ADC12_IN9(0-5)
+//	  value1 = App_ADCReadSingleChanne(&hadc1, 3);
+//	  value2 = App_ADCReadSingleChanne(&hadc1, 4);
+//	  value3 = App_ADCReadSingleChanne(&hadc1, 9);
+//		// sprintf(buffer,"ADC_Current %d ADC_0_10 %d ADC_0_5 %d\r\n",value1 ,value2 ,value3 );
+//		qTraceDecimal(value1);
+//		qTraceDecimal(value2);
+//		qTraceDecimal(value3);
+//
+//	  qTraceFloat(App_ADCReadSingleChanne(&hadc1, 3)*3.3/4095.0);
+//		qTraceFloat(value2*3.3/4095.0);
+//		qTraceFloat(value3*3.3/4095.0);
 
   }
 
@@ -250,7 +255,7 @@ static void MX_ADC1_Init(void)
   /** Common config 
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV4;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
@@ -277,9 +282,9 @@ static void MX_ADC1_Init(void)
   }
   /** Configure Regular Channel 
   */
-  sConfig.Channel = ADC_CHANNEL_4;
+  sConfig.Channel = ADC_CHANNEL_9;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_92CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -475,6 +480,8 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
 	PutStringWrapperUart_2(NULL,"=========================================\r\n");
 	PutStringWrapperUart_2(NULL, "Wakeup Time\r\n");
