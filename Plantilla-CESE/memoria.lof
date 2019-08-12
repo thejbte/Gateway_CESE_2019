@@ -2,22 +2,9 @@
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general del sistema.\relax }}{7}{figure.caption.21}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ciclo de vida de un mensaje en Sigfox\footnotemark .\relax }}{10}{figure.caption.43}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Disponibilidad geogr\IeC {\'a}fica de Sigfox\footnotemark .\relax }}{11}{figure.caption.47}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Potencia seg\IeC {\'u}n clases.\relax }}{12}{figure.caption.51}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama Sigfox \textit {back-end} \footnotemark \relax }}{13}{figure.caption.52}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces LoraWan Stack\cite {LoRaAlliance2015}.\relax }}{13}{figure.caption.58}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces LoRa arquitectura de red\cite {LoRaAlliance2015}.\relax }}{14}{figure.caption.59}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces LoraWan clases\cite {LoRaAlliance2015}.\relax }}{15}{figure.caption.60}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Clase A \cite {Ruano2016}.\relax }}{16}{figure.caption.61}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Clase B \cite {Ruano2016}.\relax }}{16}{figure.caption.62}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Clase C \cite {Ruano2016}.\relax }}{16}{figure.caption.63}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama general del sistema.\relax }}{5}{figure.caption.18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Imagen tomada de la p\IeC {\'a}gina oficial del procesador\footnotemark .\relax }}{7}{figure.caption.39}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces El lector no sabe por qu\IeC {\'e} de pronto aparece esta figura.\relax }}{7}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Jerarquia del hardware.\relax }}{17}{figure.caption.67}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquem\IeC {\'a}tico m\IeC {\'o}dulo Sigfox.\relax }}{19}{figure.caption.71}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquem\IeC {\'a}tico m\IeC {\'o}dulo LoRa.\relax }}{19}{figure.caption.74}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquem\IeC {\'a}tico entradas anal\IeC {\'o}gicas.\relax }}{20}{figure.caption.76}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquem\IeC {\'a}tico entradas anal\IeC {\'o}gicas.\relax }}{20}{figure.caption.78}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

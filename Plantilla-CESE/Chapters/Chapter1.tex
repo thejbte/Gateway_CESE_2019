@@ -23,7 +23,7 @@ En este capítulo se menciona la problemática que motivó la realización del p
 
 %http://jderobot.org/store/juancamilo/uploads/tesismaster.pdf
 \section{Motivación}
-En el transcurso de la próxima década se espera un gran crecimiento en la cantidad de dispositivos IoT (\textit{internet of things}) provenientes de redes LPWAN (\textit{Low-Power Wide Area Network}). Para el 2025, se espera que más de 100 billones de dispositivos se conecten a través de LPWAN\cite{taylor2015world}. Las principales tecnologías, que prometen una vida útil alta de la batería de los dispositivos y un alcance de hasta 15 kilómetros, son Sigfox, Lora y NB-IoT, que actualmente están conectados en todo el mundo con más de 25 millones de dispositivos, brindando servicio y facilitando las experiencias del usuario\citep{iotanalytics}.
+En el transcurso de la próxima década se espera un gran crecimiento en la cantidad de dispositivos IoT (\textit{internet of things}) provenientes de redes LPWAN (\textit{Low-Power Wide Area Network}). Para el 2025, se espera que más de 100 billones de dispositivos se conecten a través de LPWAN\citep{taylor2015world}. Las principales tecnologías, que prometen una vida útil alta de la batería de los dispositivos y un alcance de hasta 15 kilómetros, son Sigfox, Lora y NB-IoT, que actualmente están conectados en todo el mundo con más de 25 millones de dispositivos, brindando servicio y facilitando las experiencias del usuario\citep{iotanalytics}.
 
 En los procesos industriales se tiene mucha información de variables físicas y eléctricas por medio de sensores, la cual muchas veces no se aprovecha debido a que no se tiene una óptima trazabilidad de la misma o simplemente se pierde esta información. Cuando los procesos industriales fallan, necesitan una reacción inmediata por parte de una persona y esto genera una dependencia de alguien que no siempre va a estar las 24 horas del día al pendiente, quizá por costos para las mismas empresas.
 
@@ -33,7 +33,7 @@ En vista de lo de anterior se desarrolló un prototipo para ofrecer una solució
 
 
 \section{IoT (\textit{Internet of Things})}
-El concepto de internet de las cosas se refiere a la interconexión digital de dispositivos y objetos  a través  de una red, es decir, dispositivos como sensores y/o actuadores, equipados con una interfaz de comunicación, unidades de procesamiento y almacenamiento\cite{centenaro2016long}. Estos dispositivos tienen la capacidad de adquirir, intercambiar y transferir datos a la red mediante alguna tecnología de comunicación inalámbrica.
+El concepto de internet de las cosas se refiere a la interconexión digital de dispositivos y objetos  a través  de una red, es decir, dispositivos como sensores y/o actuadores, equipados con una interfaz de comunicación, unidades de procesamiento y almacenamiento\citep{centenaro2016long}. Estos dispositivos tienen la capacidad de adquirir, intercambiar y transferir datos a la red mediante alguna tecnología de comunicación inalámbrica.
 
 
 
@@ -83,56 +83,58 @@ Permite la mensajería instantánea, los servicios de mensajes cortos SMS (\text
 
 \textbf{Tecnología WiFi:}
 
-Es una tecnología que permite la interconexión inalámbrica de dispositivos electrónicos por medio de internet. WiFi, el nombre popular para el área local inalámbrica Redes basadas en el estándar IEEE 802.11b, se ha convertido en la Tecnología preferida para redes inalámbricas de área local en entornos comerciales y domésticos\citep{henry2002wifi}.
+Es una tecnología que permite la interconexión inalámbrica de dispositivos electrónicos por medio de internet. WiFi, el nombre popular para el área local inalámbrica redes basadas en el estándar IEEE 802.11b, se ha convertido en la tecnología preferida para redes inalámbricas de área local en entornos comerciales y domésticos\citep{henry2002wifi}.
 
 \textbf{Tecnología BLE:}
 
-Es una tecnología de red de área personal PAN (\textit{Personal Area Network}) inalámbrica, Permite la comunicación entre dispositivos dos o  más dispositivos Bluetooth, que opera en 2.4 GHz (una de las bandas ISM), con una tasa de transferencia de 1 Mbps en la capa física. BLE (\textit{Bluetooth Low Energy}) se introdujo por primera vez en 2010 con el objetivo de expandir la aplicación de Bluetooth para su uso en dispositivos con limitaciones de energía, como los inalámbricos. Sensores y controles inalámbricos. Los sensores y controles requieren un bajo consumo de energía, pero la cantidad de transmisión de datos es pequeña y la comunicación ocurre con poca frecuencia\citep{chang2014bluetooth}.
+Es una tecnología de red de área personal PAN (\textit{Personal Area Network}) inalámbrica, Permite la comunicación entre dispositivos dos o  más dispositivos Bluetooth, que opera en 2.4 GHz (una de las bandas ISM), con una tasa de transferencia de 1 Mbps en la capa física. BLE (\textit{Bluetooth Low Energy}) se introdujo por primera vez en 2010 con el objetivo de expandir la aplicación de Bluetooth para su uso en dispositivos con limitaciones de energía, como los sensores y controles inalámbricos. Los sensores y controles requieren un bajo consumo de energía, pero la cantidad de transmisión de datos es pequeña y la comunicación ocurre con poca frecuencia\citep{chang2014bluetooth}.
 
 
 \textbf{Tecnología ZigBee:}
 
-ZigBee es uno de El transceptor estándar más utilizado en sensores inalámbricos.redes ZigBee sobre IEEE 802.15.4 , define especificaciones para baja velocidad de datos WPAN (\textit{wireless personal area network}) para soportar baja potencia en monitorización y control de dispositivos\citep{ramya2011study}.
+ZigBee es el transceptor estándar más utilizado en sensores inalámbricos. La red ZigBee sobre IEEE 802.15.4, define especificaciones para baja velocidad de datos WPAN (\textit{wireless personal area network}) para soportar baja potencia en monitorización y control de dispositivos\citep{ramya2011study}.
 
-El consumo de energía para ZigBee es muy pequeño. En la mayoría de los casos Utiliza 1mW (o menos potencia). Pero aún así proporciona un alcance hasta 150 metros en exterior que se consigue con la técnica.llamado espectro de propagación de secuencia directa DSSS (\textit{direct sequence spread spectrum}).Funciona en los 868 MHz (Europa), 915 MHz (América del Norte y Australia) y 2.4 GHz (disponible en todo el mundo) banda ISM con hasta 20kbps, 40kbps y velocidad de datos de 250kbps respectivamente\citep{ramya2011study}.
+El consumo de energía para ZigBee es muy pequeño. En la mayoría de los casos utiliza 1mW (o menos potencia). Pero aún así proporciona un alcance hasta 150 metros en exterior que se consigue con la técnica. Llamada espectro de propagación de secuencia directa DSSS (\textit{direct sequence spread spectrum}). Funciona en los 868 MHz (Europa), 915 MHz (América del Norte y Australia) y 2.4 GHz (disponible en todo el mundo) en la banda ISM con hasta 20 Kbps, 40 Kbps y velocidad de datos de 250 Kbps respectivamente\citep{ramya2011study}.
 
 \textbf{Tecnología NB-IoT (\textit{Narrowband Internet of Things}:}
 
 Tecnología de acceso por radio que proporciona cobertura extendida, alta capacidad y larga duración de la batería. Utiliza la ya existente red móvil para conectar dispositivos de manera masiva.
 
-NB-IoT requiere un ancho de banda mínimo de 180 kHz, que es igual al tamaño del LTE físico más pequeño.
-Dependiendo de la disponibilidad del espectro, esta tecnología se puede implementar por sí solo en los portadores de guardia de LTE / UMTS existentes\citep{adhikary2016performance}.
+NB-IoT requiere un ancho de banda mínimo de 200 kHz, que es igual al tamaño del LTE físico más pequeño\citep{adhikary2016performance}.
 
-Permite transmisiones de hasta 1600 bytes sin limitación de cantidad mensajes por día, con un alcance de 1km en zonas urbanas y 10 km en zonas rurales\cite{MEKKI20191}.
+Permite transmisiones de hasta 1600 bytes sin limitación de cantidad mensajes por día, con un alcance de 1km en zonas urbanas y 10 km en zonas rurales\citep{MEKKI20191}.
 
 \textbf{Tecnología SigFox:} 
 
-Es una tecnología de comunicación UNB (\textit{Ultra-Narrow Band}) para conectar sensores y dispositivos. Opera en las bandas 868 MHz y 902-928 MHz, permite la transmisión de datos hasta 12 bytes con limitación de 140 mensajes de subida y 4 mensajes de bajada, esta tecnología tiene un alcance de hasta 10 km en zonas urbanas y 40 km en zonas rurales\cite{MEKKI20191}.
-
+Es una tecnología de comunicación UNB (\textit{Ultra-Narrow Band}) para conectar sensores y dispositivos. Opera en las bandas 868 MHz y 902-928 MHz, permite la transmisión de datos hasta 12 bytes con limitación de 140 mensajes de subida y 4 mensajes de bajada, esta tecnología tiene un alcance de hasta 10 Km en zonas urbanas y 40 Km en zonas rurales\citep{MEKKI20191}.
+\\
+\newline
+\newline
+\hfill \break
 \textbf{Tecnología LoRa:} 
 
-Es una tecnología LPWAN de modulación de radio de CCS (\textit{chirp spread spectrum}). Esta permite el envió y recepción de información en las bandas de frecuencia 433 MHz, 868 MHZ y 915 MHz, permite la transmisión de hasta 243 bytes sin limitación de cantidad de mensajes por día y tiene un alcance de 5km en zonas urbanas y 20 km en zonas rurales\cite{MEKKI20191}.
+Es una tecnología LPWAN de modulación de radio de CCS (\textit{chirp spread spectrum}). Esta permite el envió y recepción de información en las bandas de frecuencia 433 MHz, 868 MHZ y 915 MHz, permite la transmisión de hasta 243 bytes sin limitación de cantidad de mensajes por día y tiene un alcance de 5 Km en zonas urbanas y 20 Km en zonas rurales\citep{MEKKI20191}.
 
-En la tabla \ref{tab:Comparacion1Tabla} se puede observar las comparaciones de costos de las principales tecnologías LPWAN para el IoT : Sigfox, NB-IoT y LoRaWAN. En ella se muestra una ventaja en relación a costos comparado con NB-IoT\cite{mekki2018overview}.
+En la tabla \ref{tab:Comparacion1Tabla} se puede observar las comparaciones de costos de las principales tecnologías LPWAN para el IoT : Sigfox, NB-IoT y LoRaWAN. En ella se muestra una ventaja en relación a costos comparado con NB-IoT\citep{mekki2018overview}.
 
 \begin{table}[h]
     \small
 	\centering
-	\caption[Comparación costos.]{Comparación costos de tecnologías LPWAN para el IoT.}
+	\caption[Comparación costos.]{Comparación costos para BS (\textit{Base Station}), espectro y dispositivo final de tecnologías LPWAN para el IoT.}
 	\begin{tabular}{l c c c}    
 		\toprule
 		\textbf{ } 	   & \textbf{Spectrum cost} & \textbf{Deployment cost} 	& \textbf{End-device cost}\\
 		\midrule
-		Sigfox 	    &Free &>4000 euro/base station &<2 euros\\	
- 		LoRaWAN 	&Free  &>100 euros/gateway y >1000 euros/base station &3-5 euros\\
-        NB-IoT      &>500 M euro /MHz &>15000 euro/base station &>20 euros\\
+		Sigfox 	    &Free &>4K euro/BS &<2 euros\\	
+ 		LoRaWAN 	&Free  &>1K euros/BS &3-5 euros\\
+        NB-IoT      &>500M euro &>15K euro/BS &>20 euros\\
 		\bottomrule
 		\hline
 	\end{tabular}
 	\label{tab:Comparacion1Tabla}
 \end{table}
 
-Las tecnologías seleccionadas fueron Sigfox y LoRaWAN, para la selección de estas tecnologías se tuvo en cuenta algunas características tales como : LPWAN con largo alcance\cite{Samie:2016:ITE:2968456.2974004} y bajo costo\cite{mekki2018overview}. En el capitulo \ref{Chapter2} se explicaran en detalle estas tecnologías .
+Las tecnologías seleccionadas fueron Sigfox y LoRaWAN, para la selección de estas tecnologías se tuvo en cuenta algunas características tales como : LPWAN con largo alcance\citep{Samie:2016:ITE:2968456.2974004} y bajo costo\citep{mekki2018overview}. En el capítulo \ref{Chapter2} se explicaran en detalle estas tecnologías .
 
 
 %---------------Objetivos y alcance 
@@ -155,7 +157,6 @@ En la presente solución se contempla:
 	\item La transmisión de la información por medio de Sigfox.
 	\item La transmisión de la información por medio de Lora.
 	\item La visualización de la información en una plataforma paga o libre.
-	\item Se incluye partes del código de la biblioteca usada para el modulo Sigfox.
 \end{itemize}
 En la presente solución no se contempla:
 \begin{itemize}

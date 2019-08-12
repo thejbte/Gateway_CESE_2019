@@ -40,13 +40,34 @@ headsepline, % Uncomment to get a line under the header
 
 
 
+\usepackage{pstricks,pst-node} %diagramas de flujo
+%para los diagramas de flujo y definir el stilo
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered,text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, text width=1.5cm, draw=black, fill=green!30]
+
+\tikzstyle{fsm} = [circle,inner sep=0pt, text centered,draw=black, fill=blue!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{
+error/.style = {circle, draw, fill=red, align=center,
+                inner sep=0pt},
+                }
+%.---------------------------------------------------
+\usepackage{float} % para H en las figuras
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 \usepackage{palatino} % Use the Palatino font by default
 %,style=authoryear
-\usepackage[backend=bibtex,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-
+%\usepackage[backend=bibtex,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[backend=biber,style=numeric,sorting=none,natbib=true]{biblatex}
+%\usepackage[backend=biber,style=numeric,sorting=none]{biblat‌​ex}
 \addbibresource{references.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
@@ -90,7 +111,7 @@ headsepline, % Uncomment to get a line under the header
 \supervisor{Ing. Marcelo E. Romeo (UNSAM, UTN-FRBA)} % El nombre del director, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \supname
 \degree{Especialista en Sistemas Embebidos } % Nombre del grado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \author{Ing. Julian Bustamante Narvaez} % Tu nombre, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \authorname
-\juradoUNO{Esp. Ing. Leonardo carducci (FIUBA)} % Nombre y pertenencia del un jurado se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \jur1name
+\juradoUNO{Esp. Ing. Leonardo Carducci (FIUBA)} % Nombre y pertenencia del un jurado se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \jur1name
 \juradoDOS{Esp. Ing. Agustin Bassi (FIUBA)} % Nombre y pertenencia del un jurado se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \jur2name
 \juradoTRES{Esp. Ing. Ramiro Alonso (FIUBA)} % Nombre y pertenencia del un jurado se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \jur3name
 \fechaINICIO{agosto de 2018}
@@ -164,7 +185,7 @@ Jurados:\\
 \jurtresname
  
 \vfill
-\textit{Este trabajo fue realizado en las Ciudad Autónoma de Buenos Aires, entre \fechaINICIOname \hspace{1px} y \fechaFINALname.}
+\textit{Este trabajo fue realizado en la Ciudad Autónoma de Buenos Aires, entre \fechaINICIOname \hspace{1px} y \fechaFINALname.}
 \end{center}
 \end{titlepage}
 
@@ -179,7 +200,7 @@ Jurados:\\
 %The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
 \centering
 
-En esta memoria se presenta el diseño e implementación de un dispositivo de adquisición de datos con múltiples entradas digitales y análogicas para aplicaciones IoT (\textit{internet of things}) en ambientes industriales
+En esta memoria se presenta el diseño e implementación de un dispositivo de adquisición de datos con múltiples entradas digitales y análogicas para aplicaciones IoT (\textit{Internet of Things}) en ambientes industriales
 para la empresa Tecrea S.A.S. El dispositivo tiene una arquitectura modular que le permite incorporar nuevas funcionalidades y puede operar con protocolos
 inalámbricos como SigFox o Lora.
 
@@ -198,9 +219,11 @@ testing de software, diseño electrónico, circuitos impresos y gestión de proy
 %\addchaptertocentry{\acknowledgementname} % Descomentando esta línea se puede agregar los agradecimientos al índice
 \vspace{1.5cm}
 
-A . \textbf{[OPCIONAL]} 
+A la mujer de mi vida, Adriana, por el sacrificio que hizo y la comprensión que tuvo en los momentos donde no tenía tiempo para ella.
 
-No olvidarse de agradecer al tutor.
+A mi madre Edith, a mi padre Oscar y a mis hermanos, Lina, Jonatan, Felipe y Melissa por la ayuda imprescindible, por creer en mis expectativas y por comprender mis largas horas de trabajo y estudio. 
+
+A Tecrea SAS por el tiempo y colaboración brindada y a cada uno de mis compañeros de trabajo por todas sus enseñanzas.
 
 \end{acknowledgements}
 
@@ -220,7 +243,9 @@ No olvidarse de agradecer al tutor.
 %	CONTENIDO DE LA MEMORIA  - DEDICATORIA
 %----------------------------------------------------------------------------------------
 
-\dedicatory{\textbf{Dedicado a... [OPCIONAL]}}  % escribir acá si se desea una dedicatoria
+\dedicatory{\textbf{
+Con paciencia, dedicación y perseverancia los sueños se pueden cumplir.
+Este trabajo se lo dedico a toda familia, ellos son el motor de mis sueños. }}  % escribir acá si se desea una dedicatoria
 
 %----------------------------------------------------------------------------------------
 %	CONTENIDO DE LA MEMORIA  - CAPÍTULOS
